@@ -122,7 +122,9 @@ body {
 /* Intro */
 
 .intro {
+  background: #f5f5f5;
   padding: 50px 0;
+  color:#000000;
 }
 
 /* Services */
@@ -139,6 +141,7 @@ body {
 
 i.service-icon {
   border: 3px solid #ffffff;
+  background:#ffffff;
   border-radius: 50%;
   display: inline-block;
   font-size: 56px;
@@ -156,7 +159,7 @@ i.service-icon {
   display: table;
   height: 400px;
   width: 100%;
-  background: url(../img/film.jpg) no-repeat center center fixed; 
+  background: url(../img/NITI.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -181,8 +184,8 @@ i.service-icon {
 /* Call to Action */
 
 .call-to-action {
-  color: #ffffff;
-  background: #0a5175;
+  color: #000000;
+  background:#f5f5f5;
   padding: 50px 0;
 }
 
@@ -200,6 +203,8 @@ i.service-icon {
 
 footer {
   padding: 100px 0;
+  background:#0f1626;
+  color:#ffffff;
 }
 
 .top-scroll {
