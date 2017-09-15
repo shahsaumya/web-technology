@@ -74,7 +74,7 @@ a, a:hover, a:focus {
 /*Theme Backgrounds*/
 
 .bg-theme {
-	background-color: #68dff0;
+	background-color: #333;
 }
 
 .bg-theme02 {
@@ -232,7 +232,7 @@ ul.top-menu > li > .logout {
     width: 210px;
     height: 100%;
     position: fixed;
-    background: #424a5d;
+    background: #18121E;
 }
 
 #sidebar h5 {
@@ -413,7 +413,7 @@ ul.sidebar-menu li a.active i {
 }
 
 .black-bg {
-    background: #ffd777;
+    background: #000000;
     border-bottom: 1px solid #c9aa5f;
 }
 
@@ -775,13 +775,13 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 }
 
 .ds h3 {
-	color: #ffffff;
+	color: #f5f5f5;
 	font-size: 16px;
 	padding: 0 10px;
 	line-height: 60px;
 	height: 60px;
 	margin: 0;
-	background: #ff865c;
+	background: #18121E;
 	text-align: center;
 }
 
