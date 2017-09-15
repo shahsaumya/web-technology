@@ -4,7 +4,7 @@
   <title>JavaScript Form Validation</title>
   <style>body{font-family:Verdana;}</style>
 </head>
-  
+
 <body>
 <script>
   function check_Zip(zipCode){
@@ -49,7 +49,7 @@
   function check_phone(phno){
     var regex =  /^\d{10}$/;
     if(regex.test(phno.yourphone.value)){
-  
+
    return true;
     }
     else{
@@ -58,44 +58,44 @@
   }
   }
 </script>
-  
+
   <form name="alphavalidate" action="#"
   method="post" onSubmit="return check_Alpha(this)" >
-          
-  Name : 
-   <input type="text" size="40" name="yourname" /> 
-          
+
+  Name :
+   <input type="text" size="40" name="yourname" />
+
   <input type="submit" value="Submit" />
-  <input type="reset" value="Clear" /> 
- </form>     
+  <input type="reset" value="Clear" />
+ </form>
 <form name="formvalidate" action="#"
   method="post" onSubmit="return check_phone(this)" >
-          
-  Your Phone No : 
-   <input type="text" size="40" name="yourphone" /> 
-          
+
+  Your Phone No :
+   <input type="text" size="40" name="yourphone" />
+
   <input type="submit" value="Submit" />
-  <input type="reset" value="Clear"/> 
- </form>    
+  <input type="reset" value="Clear"/>
+ </form>
 <form name="formvalidate" action="#"
   method="post" onSubmit="return check_Email(this)" >
-          
-  Your Email Address : 
-   <input type="text" size="40" name="myemail" /> 
-          
-  <input type="submit" value="Submit" />
-  <input type="reset" value="Clear"/> 
- </form>         
- <form name="zipvalidate" action="#" >
-          
- ZipCode : 
-   <input type="text" size="6" name="yourzip" /> 
-          
 
-   <input type="button" value="Submit" 
+  Your Email Address :
+   <input type="text" size="40" name="myemail" />
+
+  <input type="submit" value="Submit" />
+  <input type="reset" value="Clear"/>
+ </form>
+ <form name="zipvalidate" action="#" >
+
+ ZipCode :
+   <input type="text" size="6" name="yourzip" />
+
+
+   <input type="button" value="Submit"
           onClick = "if(check_Zip(zipvalidate.yourzip)){
 alert('Its a valid zipcode')}"/>
     <input type="reset" value="Clear"/>
-  </form>    
+  </form>
 </body>
 </html>
