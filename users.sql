@@ -27,7 +27,7 @@ INSERT INTO `users` (`userId`, `userName`, `password`, `displayName`) VALUES
 (2, 'saumya', 'pass@123', 'Saumya');
 
 INSERT INTO `users` (`userId`, `userName`, `password`, `displayName`) VALUES
-(2, 'shikhar', 'pass@123', 'Shikhar');
+(3, 'shikhar', 'pass@123', 'Shikhar');
 
 INSERT INTO `users` (`userId`, `userName`, `password`, `displayName`) VALUES
-(2, 'niti', 'pass@123', 'Niti');
+(4, 'niti', 'pass@123', 'Niti');
