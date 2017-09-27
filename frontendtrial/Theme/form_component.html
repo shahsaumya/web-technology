@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,18 +8,20 @@
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>DASHGUM - Bootstrap Admin Template</title>
+    <title>Recommendo</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/js/bootstrap-datepicker/css/datepicker.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/js/bootstrap-daterangepicker/daterangepicker.css' %}" />
+
+
+    <link href="{% static 'assets/css/bootstrap.css' %}" rel="stylesheet">
     <!--external css-->
-    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="assets/js/bootstrap-datepicker/css/datepicker.css" />
-    <link rel="stylesheet" type="text/css" href="assets/js/bootstrap-daterangepicker/daterangepicker.css" />
-        
+    <link href="{% static 'assets/font-awesome/css/font-awesome.css' %}" rel="stylesheet" />
+
     <!-- Custom styles for this template -->
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/style-responsive.css" rel="stylesheet">
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/style-responsive.css' %}" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -188,7 +191,7 @@
             </div>
         </header>
       <!--header end-->
-      
+
       <!-- **********************************************************************************************************************************************************
       MAIN SIDEBAR MENU
       *********************************************************************************************************************************************************** -->
@@ -197,10 +200,10 @@
           <div id="sidebar"  class="nav-collapse ">
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
-              
+
               	  <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
               	  <h5 class="centered">Marcel Newman</h5>
-              	  	
+
                   <li class="mt">
                       <a href="index.html">
                           <i class="fa fa-dashboard"></i>
@@ -277,7 +280,7 @@
           </div>
       </aside>
       <!--sidebar end-->
-      
+
       <!-- **********************************************************************************************************************************************************
       MAIN CONTENT
       *********************************************************************************************************************************************************** -->
@@ -285,7 +288,7 @@
       <section id="main-content">
           <section class="wrapper">
           	<h3><i class="fa fa-angle-right"></i> Form Components</h3>
-          	
+
           	<!-- BASIC FORM ELELEMNTS -->
           	<div class="row mt">
           		<div class="col-lg-12">
@@ -343,9 +346,9 @@
                           </div>
                       </form>
                   </div>
-          		</div><!-- col-lg-12-->      	
+          		</div><!-- col-lg-12-->
           	</div><!-- /row -->
-          	
+
           	<!-- INLINE FORM ELELEMNTS -->
           	<div class="row mt">
           		<div class="col-lg-12">
@@ -365,7 +368,7 @@
           			</div><!-- /form-panel -->
           		</div><!-- /col-lg-12 -->
           	</div><!-- /row -->
-          	
+
           	<!-- INPUT MESSAGES -->
           	<div class="row mt">
           		<div class="col-lg-12">
@@ -394,7 +397,7 @@
           			</div><!-- /form-panel -->
           		</div><!-- /col-lg-12 -->
           	</div><!-- /row -->
-          	
+
           	<!-- INPUT MESSAGES -->
           	<div class="row mt">
           		<div class="col-lg-12">
@@ -406,7 +409,7 @@
 						    Option one is this and that&mdash;be sure to include why it's great
 						  </label>
 						</div>
-						
+
 						<div class="radio">
 						  <label>
 						    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
@@ -419,7 +422,7 @@
 						    Option two can be something else and selecting it will deselect option one
 						  </label>
 						</div>
-						
+
 						<hr>
 						<label class="checkbox-inline">
 						  <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
@@ -430,7 +433,7 @@
 						<label class="checkbox-inline">
 						  <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
 						</label>
-						
+
 						<hr>
 						<select class="form-control">
 						  <option>1</option>
@@ -446,10 +449,10 @@
 						  <option>3</option>
 						  <option>4</option>
 						  <option>5</option>
-						</select>        		
+						</select>
           			</div><!-- /form-panel -->
           		</div><!-- /col-lg-12 -->
-          		
+
           	<!-- CUSTOM TOGGLES -->
           		<div class="col-lg-12">
           			<div class="form-panel">
@@ -489,8 +492,8 @@
           			</div>
           		</div>
           	</div><!-- /row -->
-          	
-          	
+
+
 		</section><! --/wrapper -->
       </section><!-- /MAIN CONTENT -->
 
@@ -523,22 +526,22 @@
 
 	<!--custom switch-->
 	<script src="assets/js/bootstrap-switch.js"></script>
-	
+
 	<!--custom tagsinput-->
 	<script src="assets/js/jquery.tagsinput.js"></script>
-	
+
 	<!--custom checkbox & radio-->
-	
+
 	<script type="text/javascript" src="assets/js/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
 	<script type="text/javascript" src="assets/js/bootstrap-daterangepicker/date.js"></script>
 	<script type="text/javascript" src="assets/js/bootstrap-daterangepicker/daterangepicker.js"></script>
-	
+
 	<script type="text/javascript" src="assets/js/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
-	
-	
-	<script src="assets/js/form-component.js"></script>    
-    
-    
+
+
+	<script src="assets/js/form-component.js"></script>
+
+
   <script>
       //custom select box
 

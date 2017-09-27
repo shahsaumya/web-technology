@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,20 +8,21 @@
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>RECOMMENDO</title>
+    <title>Recommendo</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/js/bootstrap-datepicker/css/datepicker.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/js/bootstrap-daterangepicker/daterangepicker.css' %}" />
+
+
+    <link href="{% static 'assets/css/bootstrap.css' %}" rel="stylesheet">
     <!--external css-->
-    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link href="assets/js/fancybox/jquery.fancybox.css" rel="stylesheet" />
+    <link href="{% static 'assets/font-awesome/css/font-awesome.css' %}" rel="stylesheet" />
+
     <!-- Custom styles for this template -->
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/film_bg.css" rel="stylesheet">
-
-    <link href="assets/css/style-responsive.css" rel="stylesheet">
-
-    <script src="assets/js/jquery.js"></script>
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/style-responsive.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/film_bg.css' %}" rel="stylesheet">
 
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -191,7 +193,7 @@
             </div>
         </header>
       <!--header end-->
-      
+
       <!-- **********************************************************************************************************************************************************
       MAIN SIDEBAR MENU
       *********************************************************************************************************************************************************** -->
@@ -199,10 +201,10 @@
           <div id="sidebar"  class="nav-collapse ">
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
-              
+
                   <p class="centered"><a href="profile.html"><img src="assets/img/hi.jpg" class="img-circle" width="80"></a></p>
                   <h5 class="centered">Hi There</h5>
-                    
+
                   <li class="mt">
                       <a class="active" href="index.html">
                           <i class="fa fa-dashboard"></i>
@@ -308,7 +310,7 @@
           </div>
       </aside>
       <!--sidebar end-->
-      
+
       <!-- **********************************************************************************************************************************************************
       MAIN CONTENT
       *********************************************************************************************************************************************************** -->
@@ -322,7 +324,7 @@
                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
 
               <div class="clip">
-                <div class="film"> 
+                <div class="film">
 
 
                   <div class="project-wrapper">
@@ -343,11 +345,11 @@
 
             </div>
           <!-- col-lg-4 -->
-					
+
 					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
 
 						<div class="project-wrapper">
-            
+
             <div class="clip">
             <div class="film">
 
@@ -364,7 +366,7 @@
                     </div>
             </div>
 					</div><!-- col-lg-4 -->
-					
+
 					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
 						<div class="project-wrapper">
 		                    <div class="project">
@@ -392,7 +394,7 @@
 		                    </div>
 		                </div>
 					</div><!-- col-lg-4 -->
-					
+
 					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
 						<div class="project-wrapper">
 		                    <div class="project">
@@ -405,7 +407,7 @@
 		                    </div>
 		                </div>
 					</div><!-- col-lg-4 -->
-					
+
 					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
 						<div class="project-wrapper">
 		                    <div class="project">
@@ -433,7 +435,7 @@
 		                    </div>
 		                </div>
 					</div><!-- col-lg-4 -->
-					
+
 					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
 						<div class="project-wrapper">
 		                    <div class="project">
@@ -446,7 +448,7 @@
 		                    </div>
 		                </div>
 					</div><!-- col-lg-4 -->
-					
+
 					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
 						<div class="project-wrapper">
 		                    <div class="project">
@@ -478,7 +480,7 @@
   </section>
 
     <!-- js placed at the end of the document so the pages load faster -->
-	<script src="assets/js/fancybox/jquery.fancybox.js"></script>    
+	<script src="assets/js/fancybox/jquery.fancybox.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
     <script src="assets/js/jquery.scrollTo.min.js"></script>
@@ -489,7 +491,7 @@
     <script src="assets/js/common-scripts.js"></script>
 
     <!--script for this page-->
-  
+
   <script type="text/javascript">
       $(function() {
         //    fancybox
@@ -497,7 +499,7 @@
       });
 
   </script>
-  
+
   <script>
       //custom select box
 

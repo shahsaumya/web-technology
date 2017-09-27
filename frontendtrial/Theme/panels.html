@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,15 +11,15 @@
     <title>DASHGUM - Bootstrap Admin Template</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="{% static 'assets/css/bootstrap.css' %}" rel="stylesheet">
     <!--external css-->
-    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-        
-    <!-- Custom styles for this template -->
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/style-responsive.css" rel="stylesheet">
+    <link href="{% static 'assets/font-awesome/css/font-awesome.css' %}" rel="stylesheet" />
 
-    <script src="assets/js/chart-master/Chart.js"></script>
+    <!-- Custom styles for this template -->
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/style-responsive.css' %}" rel="stylesheet">
+
+    <script src="{% static 'assets/js/chart-master/Chart.js' %}"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -188,7 +189,7 @@
             </div>
         </header>
       <!--header end-->
-      
+
       <!-- **********************************************************************************************************************************************************
       MAIN SIDEBAR MENU
       *********************************************************************************************************************************************************** -->
@@ -197,10 +198,10 @@
           <div id="sidebar"  class="nav-collapse ">
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
-              
+
               	  <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
               	  <h5 class="centered">Marcel Newman</h5>
-              	  	
+
                   <li class="mt">
                       <a href="index.html">
                           <i class="fa fa-dashboard"></i>
@@ -277,7 +278,7 @@
           </div>
       </aside>
       <!--sidebar end-->
-      
+
       <!-- **********************************************************************************************************************************************************
       MAIN CONTENT
       *********************************************************************************************************************************************************** -->
@@ -287,7 +288,7 @@
           	<h3><i class="fa fa-angle-right"></i> Discover Our Panels</h3>
           	<div class="row mt">
           		<div class="col-lg-12">
-          		
+
 					<! -- 1st ROW OF PANELS -->
 					<div class="row">
 						<!-- TWITTER PANEL -->
@@ -298,7 +299,7 @@
 								<p class="user">@Alvrz_is</p>
 							</div>
 						</div><!-- /col-md-4 -->
-						
+
 						<div class="col-lg-4 col-md-4 col-sm-4 mb">
 							<!-- WHITE PANEL - TOP USER -->
 							<div class="white-panel pn">
@@ -319,7 +320,7 @@
 									</div>
 							</div>
 						</div><!-- /col-md-4 -->
-						
+
 						<div class="col-lg-4 col-md-4 col-sm-4 mb">
 							<!-- INSTAGRAM PANEL -->
 							<div class="instagram-panel pn">
@@ -331,7 +332,7 @@
 							</div>
 						</div><!-- /col-md-4 -->
 					</div><! --/END 1ST ROW OF PANELS -->
-					
+
 					<! -- 2ND ROW OF PANELS -->
 					<div class="row">
 						<! -- TODO PANEL -->
@@ -346,7 +347,7 @@
 							    <input type='submit' value='All Done!' id='submit'/>
 							</div>
 						</div><! --/col-md-4 -->
-						
+
 						<! -- PROFILE 01 PANEL -->
 						<div class="col-lg-4 col-md-4 col-sm-4 mb">
 							<div class="content-panel pn">
@@ -362,7 +363,7 @@
 								</div>
 							</div><! --/content-panel -->
 						</div><! --/col-md-4 -->
-						
+
 						<! -- PROFILE 02 PANEL -->
 						<div class="col-lg-4 col-md-4 col-sm-4 mb">
 							<div class="content-panel pn">
@@ -380,7 +381,7 @@
 							</div><! --/panel -->
 						</div><!--/ col-md-4 -->
 					</div><! --/END 2ND ROW OF PANELS -->
-					
+
 					<! -- 3RD ROW OF PANELS -->
 					<!-- Product Panel -->
 					<div class="row">
@@ -393,7 +394,7 @@
 								<button class="btn btn-small btn-theme04">FULL REPORT</button>
 							</div>
 						</div><! --/col-md-4 -->
-						
+
 						<! -- Spotify Panel -->
 						<div class="col-lg-4 col-md-4 col-sm-4 mb">
 							<div class="content-panel pn">
@@ -411,7 +412,7 @@
 								<p class="followers"><i class="fa fa-user"></i> 576,000 FOLLOWERS</p>
 							</div>
 						</div><! --/col-md-4-->
-					
+
 						<! -- Blog Panel -->
 						<div class="col-lg-4 col-md-4 col-sm-4 mb">
 							<div class="content-panel pn">
@@ -425,7 +426,7 @@
 							</div>
 						</div><!-- /col-md-4-->
 					</div><! -- END 3RD ROW OF PANELS -->
-          		
+
                       <!-- CHART PANELS -->
                       <div class="row">
                       	<div class="col-md-4 col-sm-4 mb">
@@ -457,7 +458,7 @@
 	                      		</div>
 	                      	</div><! --/grey-panel -->
                       	</div><!-- /col-md-4-->
-                      	
+
 
                       	<div class="col-md-4 col-sm-4 mb">
                       		<div class="darkblue-panel pn">
@@ -513,8 +514,8 @@
 					  		</div>
 					  	</div><! --/col-md-4 -->
                     </div><!-- /END CHART - 4TH ROW OF PANELS -->
-                    
-                    
+
+
 					<! -- 5TH ROW OF PANELS -->
 					<div class="row">
 						<div class="col-md-4 col-sm-4 mb">
@@ -529,7 +530,7 @@
 								<p class="mt"><b>$ 17,980</b><br/>Month Income</p>
 							</div>
 						</div><!-- /col-md-4 -->
-					
+
                       	<div class="col-md-4 col-sm-4 mb">
 					        <div class="stock card">
 					        	<div class="stock-chart">
@@ -551,7 +552,7 @@
 								</div>
 					        </div>
 						</div><! -- /col-md-4 -->
-						
+
                       	<div class="col-md-4 col-sm-4 mb">
                       		<div class="darkblue-panel pn">
                       			<div class="darkblue-header">
@@ -579,7 +580,7 @@
 								<h4>BUDAPEST</h4>
 							</div>
 						</div><!-- /col-md-4-->
-						
+
 						<!-- WEATHER-2 PANEL -->
 						<div class="col-lg-4 col-md-4 col-sm-4 mb">
 							<div class="weather-2 pn">
@@ -594,7 +595,7 @@
 									</div>
 								</div><!-- /weather-2 header -->
 								<div class="row centered">
-									<img src="assets/img/ny.jpg" class="img-circle" width="120">			
+									<img src="assets/img/ny.jpg" class="img-circle" width="120">
 								</div>
 								<div class="row data">
 									<div class="col-sm-6 col-xs-6 goleft">
@@ -610,7 +611,7 @@
 								</div>
 							</div>
 						</div><! --/col-md-4 -->
-						
+
 						<!-- WEATHER-3 PANEL -->
 						<div class="col-lg-4 col-md-4 col-sm-4 mb">
 							<div class="weather-3 pn centered">
@@ -631,10 +632,10 @@
 						</div><! --/col-md-4 -->
 					</div><!-- /END 6TH ROW OF PANELS -->
 
-					
+
           		</div>
           	</div>
-			
+
 		</section><! --/wrapper -->
       </section><!-- /MAIN CONTENT -->
 
@@ -663,9 +664,9 @@
     <script src="assets/js/common-scripts.js"></script>
 
     <!--script for this page-->
-    <script src="assets/js/sparkline-chart.js"></script>    
-    
-    
+    <script src="assets/js/sparkline-chart.js"></script>
+
+
   <script>
       //custom select box
 

@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,13 +11,13 @@
     <title>DASHGUM - Bootstrap Admin Template</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="{% static 'assets/css/bootstrap.css' %}" rel="stylesheet">
     <!--external css-->
-    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-        
+    <link href="{% static 'assets/font-awesome/css/font-awesome.css' %}" rel="stylesheet" />
+
     <!-- Custom styles for this template -->
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/style-responsive.css" rel="stylesheet">
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/style-responsive.css' %}" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -32,13 +33,13 @@
       *********************************************************************************************************************************************************** -->
 
 	  	<div class="container">
-	  	
+
 	  		<div id="showtime"></div>
 	  			<div class="col-lg-4 col-lg-offset-4">
 	  				<div class="lock-screen">
 		  				<h2><a data-toggle="modal" href="#myModal"><i class="fa fa-lock"></i></a></h2>
 		  				<p>UNLOCK</p>
-		  				
+
 				          <!-- Modal -->
 				          <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
 				              <div class="modal-dialog">
@@ -50,7 +51,7 @@
 				                      <div class="modal-body">
 				                          <p class="centered"><img class="img-circle" width="80" src="assets/img/ui-sam.jpg"></p>
 				                          <input type="password" name="password" placeholder="Password" autocomplete="off" class="form-control placeholder-no-fix">
-				
+
 				                      </div>
 				                      <div class="modal-footer centered">
 				                          <button data-dismiss="modal" class="btn btn-theme04" type="button">Cancel</button>
@@ -60,11 +61,11 @@
 				              </div>
 				          </div>
 				          <!-- modal -->
-		  				
-		  				
+
+
 	  				</div><! --/lock-screen -->
 	  			</div><!-- /col-lg-4 -->
-	  	
+
 	  	</div><!-- /container -->
 
     <!-- js placed at the end of the document so the pages load faster -->
