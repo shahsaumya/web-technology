@@ -1,0 +1,39 @@
+data {
+ display: table;
+ width: 80em;
+ border-collapse: collapse;
+ border-spacing: 0;
+ border: 2px solid gray;
+ margin: 1em;
+ table-layout: fixed;
+}
+
+data-caption {
+ display: table-caption;
+ text-align: center;
+ font: 1.5em Georgia, serif;
+ color: gray;
+ padding-bottom: 4px;
+}
+
+data-row {
+ display: table-row;
+}
+
+data-row:nth-child(odd) {
+  background: #ffc;
+}
+
+data-header, data-cell {
+ display: table-cell;
+ padding: 0.3em;
+ border: 1px solid gray;
+ vertical-align: top;
+ text-align: center;
+}
+
+data-header {
+ font-weight: bold;
+ background: gray;
+ color: #fff;
+}
