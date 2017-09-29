@@ -80,8 +80,7 @@ left: -116px;
 }
 .cont_img_back_grey > img {
 width: 100%;
--webkit-filter: grayscale(100%);     filter: grayscale(100%);
-opacity: 0.2;
+opacity: 0.5;
 animation-name: animar_fondo;
 animation-duration: 20s;
 animation-timing-function: linear;
@@ -91,12 +90,12 @@ animation-direction: alternate;
 .cont_img_back_ {
 position: absolute;
 width: 950px;
-top:-200px;
+top:-80px;
 left: -116px;
 }
 .cont_img_back_ > img {
 width: 100%;
-opacity: 0.3;
+opacity: 0.5;
 animation-name: animar_fondo;
 animation-duration: 20s;
 animation-timing-function: linear;
