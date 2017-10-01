@@ -27,6 +27,10 @@ def home(request):
         return redirect(reverse('index'))
     return render(request,'home.html')
 
+
+def signupLogin(request):
+    return render(request,'signupLogin.html')
+
 def register(request):
     registered = False
 
