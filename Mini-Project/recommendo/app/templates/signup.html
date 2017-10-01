@@ -3,7 +3,7 @@
 <html >
    <head>
       <meta charset="UTF-8">
-      <title>Login</title>
+      <title>Sign Up</title>
       <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300'>
       <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
       <link rel="stylesheet" href="{% static 'assets/css/styleSignupLogin.css' %}">
@@ -15,16 +15,16 @@
                <div class="cont_info_log_sign_up">
                   <div class="col_md_login">
                      <div class="cont_ba_opcitiy">
-                        <h2>LOGIN</h2>
-                        <p>Login to your existing account.</p>
-                        <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+                        <h2>WELCOME TO RECOMMENDO</h2>
+                        <p><em>The</em> go-to movie website</p>
+                        <button class="btn_login" onclick="cambiar_login()">A glimpse of what awaits you!</button>
                      </div>
                   </div>
                   <div class="col_md_sign_up">
                      <div class="cont_ba_opcitiy">
-                        <h2>WELCOME BACK TO RECOMMENDO</h2>
-                        <p><em>The</em> go-to movie website</p>
-                        <button class="btn_sign_up" onclick="cambiar_sign_up()">A glimpse of what awaits you!</button>
+                        <h2>SIGN UP</h2>
+                        <p>Sign up for a new account.</p>
+                        <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
                      </div>
                   </div>
                </div>
@@ -39,17 +39,22 @@
                   </div>
                   <div class="cont_form_login">
                      <a href="#" onclick="ocultar_login_sign_up()" ><i class="material-icons">&#xE5C4;</i></a>
-                     <h2>LOGIN</h2>
-                     <input type="text" placeholder="Email" />
-                     <input type="password" placeholder="Password" />
-                     <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+                     <h2>MOVIES</h2>
+                     <!-- <input type="text" placeholder="Email" />
+                     <input type="password" placeholder="Password" /> -->
+                     <!-- <button class="btn_login" onclick="cambiar_login()">LOGIN</button> -->
+                     <br>
+                     <img src="{% static 'assets/img/f.jpg' %}" width="300" height="250">
                   </div>
                   <div class="cont_form_sign_up">
                      <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
-                     <h2>MOVIES</h2>
-                     <br>
-                     <img src="{% static 'assets/img/f.jpg' %}" width="300" height="250">
-                     
+                     <h2>SIGN UP</h2>
+                     <input type="text" placeholder="Name"/>
+                     <input type="text" placeholder="Email" />
+                     <input type="text" placeholder="Age" />
+                     <input type="password" placeholder="Password" />
+                     <input type="password" placeholder="Confirm Password" />
+                     <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
                   </div>
                </div>
             </div>

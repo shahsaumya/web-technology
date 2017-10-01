@@ -12,8 +12,11 @@ import csv
 def index(request):
     return render(request,'index.html', {'view_is_index': True})
 
-def signupLogin(request):
-    return render(request,'signup-login.html')
+def signup(request):
+    return render(request,'signup.html')
+
+def login(request):
+    return render(request,'login.html')
 
 def home(request):
     if request.user.is_authenticated():
