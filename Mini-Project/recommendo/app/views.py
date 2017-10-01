@@ -10,26 +10,15 @@ from app.models import Movies
 import csv
 
 def index(request):
-    # reader = csv.reader(open("/home/saumya/Desktop/WT/Mini-Project/ml-latest-small/combined.csv"))
-
-    # for row in reader:
-    #     mid = row[0]
-    #     title = row[1]
-    #     genre = row[2]
-    #     imdb = row[3]
-    #     tmdb = row[4]
-    #     Movies.objects.get_or_create(movieId = mid,title = title,genres = genre,imdbId = imdb,tmdbId = tmdb)
-
     return render(request,'index.html', {'view_is_index': True})
+
+def signupLogin(request):
+    return render(request,'signup-login.html')
 
 def home(request):
     if request.user.is_authenticated():
         return redirect(reverse('index'))
     return render(request,'home.html')
-
-
-def signupLogin(request):
-    return render(request,'signupLogin.html')
 
 def register(request):
     registered = False
@@ -42,7 +31,7 @@ def register(request):
        return redirect(reverse('index'))
 
     else:
-        return render(request, 'register.html', {'user_form': user_form, 'profile_form': profile_form, 'registered': registered})
+        return render(request, 'signup-login.html', {'user_form': user_form, 'profile_form': profile_form, 'registered': registered})
 
 
 @csrf_protect
@@ -94,7 +83,7 @@ def add_user(request):
 
         else:
             print (user_form.errors, profile_form.errors)
-            return redirect(reverse('register'))
+            return redirect(reverse('sign-in'))
     else:
         return redirect(reverse('sign-in'))
 

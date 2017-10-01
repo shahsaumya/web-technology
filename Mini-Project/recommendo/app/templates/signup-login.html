@@ -38,21 +38,31 @@
                      <img src="https://static1.squarespace.com/static/55396962e4b053ce148cb1e1/t/57210fcab6aa60cca01f49fb/1461784525042/rolleiflex-brooklyn-film-camera.jpg?format=1500w" alt="" />
                   </div>
                   <div class="cont_form_login">
-                     <a href="#" onclick="ocultar_login_sign_up()" ><i class="material-icons">&#xE5C4;</i></a>
+                     <a href="#"><i class="material-icons">&#xE5C4;</i></a>
                      <h2>LOGIN</h2>
-                     <input type="text" placeholder="Email" />
+                     <!--These two lines after this comment need to be added in the sign-in page - The fields are not to be deleted in sign-in. Only in register. -->
+                     <form id="login_form" method="post" action="/sign-in/">
+                     {% csrf_token %}<!--IDHAR TAK -->
+                     <input type="text" placeholder="Username" />
                      <input type="password" placeholder="Password" />
                      <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
                   </div>
                   <div class="cont_form_sign_up">
-                     <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
+                     <a href="#"><i class="material-icons">&#xE5C4;</i></a>
                      <h2>SIGN UP</h2>
-       <input type="text" placeholder="Name"/>
-                     <input type="text" placeholder="Email" />
-                     <input type="text" placeholder="Age" />
-                     <input type="password" placeholder="Password" />
-                     <input type="password" placeholder="Confirm Password" />
+               <!--ADD THIS STUFF TO YOUR REGISTER form. Remove all the fields in that page-->
+                     <form id="user_form" method="post" action="{% url 'add_user' %}">
+                           {% csrf_token %}
+                           <!-- Display each form. The as_p method wraps each element in a paragraph
+                                (<p>) element. This ensures each element appears on a new line,
+                                making everything look neater. -->
+
+                          {{ user_form.as_p }}
+                          {{ profile_form.as_p }}<!--IDHAR TAK-->
+
                      <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
+
+                     </form>
                   </div>
                </div>
             </div>
