@@ -3,7 +3,9 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, redirect, reverse
 from django.contrib.auth.decorators import login_required
 from app.forms import UserForm, UserProfileForm
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate
+from django.contrib.auth import logout as auth_logout
+from django.contrib.auth import login as auth_login
 from django.views.decorators.csrf import csrf_protect, csrf_exempt
 
 from app.models import Movies
@@ -12,16 +14,13 @@ import csv
 def index(request):
     return render(request,'index.html', {'view_is_index': True})
 
-def signup(request):
-    return render(request,'signup.html')
-
-def login(request):
-    return render(request,'login.html')
+def dashboard(request):
+    return render(request,'dashboard.html')
 
 def home(request):
     if request.user.is_authenticated():
         return redirect(reverse('index'))
-    return render(request,'home.html')
+    return render(request,'dashboard.html')
 
 def register(request):
     registered = False
@@ -34,20 +33,20 @@ def register(request):
        return redirect(reverse('index'))
 
     else:
-        return render(request, 'signup-login.html', {'user_form': user_form, 'profile_form': profile_form, 'registered': registered})
-
+        return render(request, 'signup.html', {'user_form': user_form, 'profile_form': profile_form, 'registered': registered})
 
 @csrf_protect
-def user_login(request):
+def login(request):
     if request.method == 'POST':
-        username = request.POST['username']
-        password = request.POST['password']
+        username = request.POST.get('username')
+        print(username)
+        password = request.POST.get('password')
         user = authenticate(username=username, password=password)
 
         if user:
             if user.is_active:
-                login(request, user)
-                return redirect(reverse('index'))
+                auth_login(request, user)
+                return redirect(reverse('dashboard'))
             else:
                 return HttpResponse("Your account is disabled.")
         else:
@@ -58,10 +57,9 @@ def user_login(request):
     elif request.method == 'GET':
         print(request.user)
         if request.user.is_authenticated:
-             return redirect(reverse('index'))
+             return redirect(reverse('dashboard'))
         else:
-            return render(request, 'sign-in.html', {})
-
+            return render(request, 'login.html', {})
 
 def add_user(request):
     if request.method == 'POST':
@@ -79,20 +77,20 @@ def add_user(request):
 
                 profile.save()
                 registered = True
-                return redirect(reverse('sign-in'))
+                return redirect(reverse('login'))
 
             except:
-                return redirect(reverse('sign-in'))
+                return redirect(reverse('login'))
 
         else:
             print (user_form.errors, profile_form.errors)
-            return redirect(reverse('sign-in'))
+            return redirect(reverse('register'))
     else:
-        return redirect(reverse('sign-in'))
+        return redirect(reverse('login'))
 
 @login_required
-def user_logout(request):
+def logout(request):
     # Since we know the user is logged in, we can now just log them out.
-    logout(request)
+    auth_logout(request)
     # Take the user back to the homepage.
-    return HttpResponseRedirect(reverse('home'))
+    return HttpResponseRedirect('/login/')

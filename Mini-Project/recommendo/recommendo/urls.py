@@ -22,14 +22,14 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^index/$', views.index, name='index'),
-    url(r'^signup/$', views.signup, name='signup'),
-    url(r'^login/$', views.login, name='login'),
+    #url(r'^signup/$', views.signup, name='signup'),
+    #url(r'^login/$', views.login, name='login'),
     url(r'^register/$', views.register, name='register'),
     url(r'^add-user/$',views.add_user, name='add_user'),
-    #url(r'^register/$',views.register, name='register'),
-    url(r'^sign-in/$',views.user_login, name='sign-in'),
-    url(r'^logout/$', views.user_logout, name='logout'),
+    url(r'^login/$',views.login, name='login'),
+    url(r'^logout/$', views.logout, name='logout'),
     url(r'^add-user/$', views.add_user, name='add-user'),
+    url(r'^dashboard/$',views.dashboard, name='dashboard')
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
