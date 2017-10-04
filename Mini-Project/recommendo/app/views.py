@@ -17,6 +17,18 @@ def index(request):
 def dashboard(request):
     return render(request,'dashboard.html')
 
+def gtky(request):
+    return render(request,'gtky.html')
+
+def gallery(request):
+    return render(request,'gallery.html')
+
+def todo_list(request):
+    return render(request,'todo_list.html')
+
+def profile(request):
+    return render(request,'profile.html')
+
 def home(request):
     if request.user.is_authenticated():
         return redirect(reverse('index'))
@@ -77,16 +89,16 @@ def add_user(request):
 
                 profile.save()
                 registered = True
-                return redirect(reverse('login'))
+                return redirect(reverse('gtky'))
 
             except:
-                return redirect(reverse('login'))
+                return redirect(reverse('gtky'))
 
         else:
             print (user_form.errors, profile_form.errors)
             return redirect(reverse('register'))
     else:
-        return redirect(reverse('login'))
+        return redirect(reverse('gtky'))
 
 @login_required
 def logout(request):
