@@ -8,7 +8,7 @@
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>DASHGUM - FREE Bootstrap Admin Template</title>
+    <title>Recommendo - The go-to movie website</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{% static 'assets/css/bootstrap.css' %}" rel="stylesheet">
@@ -204,24 +204,27 @@
               <ul class="sidebar-menu" id="nav-accordion">
 
               	  <p class="centered"><a href="profile.html"><img src="{% static 'assets/img/hi.jpg' %}" class="img-circle" width="80"></a></p>
+
+              	  <p class="centered"><a href="profile.html"><img src="{% static 'assets/img/film3.jpg' %}" class="img-circle" width="80"></a></p>
+
               	  <h5 class="centered">Hi There</h5>
 
                   <li class="mt">
-                      <a class="active" href="index.html">
+                      <a class="active" href="#">
                           <i class="fa fa-dashboard"></i>
                           <span>Dashboard</span>
                       </a>
                   </li>
 
                   <li class = "sub-menu">
-                    <a href = "gallery.html">
+                    <a href = "{% url 'gallery' %}">
                           <i class="fa fa-plus-circle"></i>
                           <span>Add ratings</span>
                       </a>
 
                   </li>
                    <li class = "sub-menu">
-                    <a href = "todo_list.html">
+                    <a href = "{% url 'todo_list' %}">
                           <i class="fa fa-heart"></i>
                           <span>View watchlist</span>
                       </a>
@@ -235,7 +238,7 @@
 
                   </li>
                    <li class = "sub-menu">
-                    <a href = "profile.html">
+                    <a href = "{% url 'profile' %}">
                           <i class="fa fa-user"></i>
                           <span>View your profile</span>
                       </a>
@@ -417,14 +420,20 @@
       RIGHT SIDEBAR CONTENT
       *********************************************************************************************************************************************************** -->
 
-<!-- <div class="col-lg-3 ds">
 
-  COMPLETED ACTIONS DONUTS CHART
+						<h3>REVIEWS</h3>
+
+                    COMPLETED ACTIONS DONUTS CHART
 
 
 
 
-</div>/col-lg-3 -->
+
+<<<<<<< HEAD
+</div>
+                  </div> <!-- /col-lg-3 -->
+                  </div>
+
           </section>
       </section>
 

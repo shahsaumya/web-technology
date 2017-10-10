@@ -21,6 +21,10 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^gallery/$', views.gallery, name='gallery'),
+    url(r'^gtky/$', views.gtky, name='gtky'),
+    url(r'^todo_list/$', views.todo_list, name='todo_list'),
+    url(r'^profile/$', views.profile, name='profile'),
     url(r'^index/$', views.index, name='index'),
     #url(r'^signup/$', views.signup, name='signup'),
     #url(r'^login/$', views.login, name='login'),
@@ -30,6 +34,7 @@ urlpatterns = [
     url(r'^logout/$', views.logout, name='logout'),
     url(r'^add-user/$', views.add_user, name='add-user'),
     url(r'^dashboard/$',views.dashboard, name='dashboard')
+
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

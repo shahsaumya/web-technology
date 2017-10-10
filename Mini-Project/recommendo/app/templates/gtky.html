@@ -187,9 +187,9 @@
                 <!--  notification end -->
             </div>
             <div class="top-menu">
-              <ul class="nav pull-right top-menu">
+            	<ul class="nav pull-right top-menu">
                     <li><a class="logout" href={"% url 'logout' %}">Logout</a></li>
-              </ul>
+            	</ul>
             </div>
         </header>
       <!--header end-->
@@ -203,18 +203,18 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
 
-                  <p class="centered"><a href="profile.html"><img src="{% static 'assets/img/film3.jpg' %}" class="img-circle" width="80"></a></p>
-                  <h5 class="centered">Hi There</h5>
+              	  <p class="centered"><a href="profile.html"><img src="{% static 'assets/img/film3.jpg' %}" class="img-circle" width="80"></a></p>
+              	  <h5 class="centered">Hi There</h5>
 
                   <li class="mt">
-                      <a href="{% url 'dashboard' %}">
+                      <a href="#">
                           <i class="fa fa-dashboard"></i>
                           <span>Dashboard</span>
                       </a>
                   </li>
 
                   <li class = "sub-menu">
-                    <a class = "active" href="#">
+                    <a href = "{% url 'gallery' %}">
                           <i class="fa fa-plus-circle"></i>
                           <span>Add ratings</span>
                       </a>
@@ -271,68 +271,12 @@
                         </div>
   </div>
 </div>
-            <h3><i class="fa fa-film"></i> Add Ratings </h3>
-            <hr>
-<br>
-<div id="1">
-<div id="reviewStars-input" >
-  <input id="star-4" type="radio" name="reviewStars"/>
-  <label title="gorgeous" for="star-4"></label>
+          	<h3><i class="fa fa-film"></i> Get To Know You Page </h3>
+            <h4>Select the movies you would prefer to watch and we'll suggest you many more according to your taste!</h4>
+          	<hr>
 
-  <input id="star-3" type="radio" name="reviewStars"/>
-  <label title="good" for="star-3"></label>
 
-  <input id="star-2" type="radio" name="reviewStars"/>
-  <label title="regular" for="star-2"></label>
 
-  <input id="star-1" type="radio" name="reviewStars"/>
-  <label title="poor" for="star-1"></label>
-
-  <input id="star-0" type="radio" name="reviewStars"/>
-  <label title="bad" for="star-0"></label>
-</div>
-</div>
-
- <div id="2">           
-<div id="reviewStars-input" >
-  <input id="star-4" type="radio" name="reviewStars"/>
-  <label title="gorgeous" for="star-4"></label>
-
-  <input id="star-3" type="radio" name="reviewStars"/>
-  <label title="good" for="star-3"></label>
-
-  <input id="star-2" type="radio" name="reviewStars"/>
-  <label title="regular" for="star-2"></label>
-
-  <input id="star-1" type="radio" name="reviewStars"/>
-  <label title="poor" for="star-1"></label>
-
-  <input id="star-0" type="radio" name="reviewStars"/>
-  <label title="bad" for="star-0"></label>
-</div>
-</div>
-          
-
- <div id="3">                           
-<div id="reviewStars-input">
-  <input id="star-4" type="radio" name="reviewStars"/>
-  <label title="gorgeous" for="star-4"></label>
-
-  <input id="star-3" type="radio" name="reviewStars"/>
-  <label title="good" for="star-3"></label>
-
-  <input id="star-2" type="radio" name="reviewStars"/>
-  <label title="regular" for="star-2"></label>
-
-  <input id="star-1" type="radio" name="reviewStars"/>
-  <label title="poor" for="star-1"></label>
-
-  <input id="star-0" type="radio" name="reviewStars"/>
-  <label title="bad" for="star-0"></label>
-</div>
-</div>
-                               
-          <br>
             <div class="row mt">
 
               <div class="clip">
@@ -347,7 +291,7 @@
                       <div class="photo-wrapper">
 
                         <div class="photo">
-                          <a class="fancybox" href="{% static 'assets/img/portfolio/port04.jpg' %}"><img class="img-responsive" src="{% static 'assets/img/portfolio/port04.jpg' %}" alt=""></a>
+                          <a class="fancybox"><img class="img-responsive" src="{% static 'assets/img/gtky/spectre.jpg' %}" alt=""></a>
                         </div>
                         <div class="overlay"></div>
                       </div>
@@ -360,259 +304,146 @@
           <!-- col-lg-4 -->
 
                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
-            <div class="project-wrapper">
-                        <div class="project">
-                            <div class="photo-wrapper">
-                                <div class="photo">
-                                  <a class="fancybox" href="{% static 'assets/img/md.jpg' %}"><img class="img-responsive" src="{% static 'assets/img/portfolio/port05.jpg' %}" alt=""></a>
-                                </div>
-                                <div class="overlay"></div>
-                            </div>
-                        </div>
-                    </div>
-          </div><!-- col-lg-4 -->
+						<div class="project-wrapper">
+		                    <div class="project">
+		                        <div class="photo-wrapper">
+		                            <div class="photo">
+		                            	<a class="fancybox"><img class="img-responsive" src="{% static 'assets/img/gtky/pp.jpg' %}" alt=""></a>
+		                            </div>
+		                            <div class="overlay"></div>
+		                        </div>
+		                    </div>
+		                </div>
+					</div><!-- col-lg-4 -->
 
                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
-            <div class="project-wrapper">
-                        <div class="project">
-                            <div class="photo-wrapper">
-                                <div class="photo">
-                                  <a class="fancybox" href="{% static 'assets/img/portfolio/port06.jpg' %}"><img class="img-responsive" src="{% static 'assets/img/portfolio/port06.jpg' %}" alt=""></a>
-                                </div>
-                                <div class="overlay"></div>
-                            </div>
-                        </div>
-                    </div>
-          </div><!-- col-lg-4 -->
-        </div><!-- /row -->
+						<div class="project-wrapper">
+		                    <div class="project">
+		                        <div class="photo-wrapper">
+		                            <div class="photo">
+		                            	<a class="fancybox"><img class="img-responsive" src="{% static 'assets/img/gtky/gb.jpg' %}" alt=""></a>
+		                            </div>
+		                            <div class="overlay"></div>
+		                        </div>
+		                    </div>
+		                </div>
+					</div><!-- col-lg-4 -->
+				</div><!-- /row -->
 
-            
-<br>
-<div id="4">
-<div id="reviewStars-input" >
-  <input id="star-4" type="radio" name="reviewStars"/>
-  <label title="gorgeous" for="star-4"></label>
-
-  <input id="star-3" type="radio" name="reviewStars"/>
-  <label title="good" for="star-3"></label>
-
-  <input id="star-2" type="radio" name="reviewStars"/>
-  <label title="regular" for="star-2"></label>
-
-  <input id="star-1" type="radio" name="reviewStars"/>
-  <label title="poor" for="star-1"></label>
-
-  <input id="star-0" type="radio" name="reviewStars"/>
-  <label title="bad" for="star-0"></label>
-</div>
-</div>
-
- <div id="5">           
-<div id="reviewStars-input" >
-  <input id="star-4" type="radio" name="reviewStars"/>
-  <label title="gorgeous" for="star-4"></label>
-
-  <input id="star-3" type="radio" name="reviewStars"/>
-  <label title="good" for="star-3"></label>
-
-  <input id="star-2" type="radio" name="reviewStars"/>
-  <label title="regular" for="star-2"></label>
-
-  <input id="star-1" type="radio" name="reviewStars"/>
-  <label title="poor" for="star-1"></label>
-
-  <input id="star-0" type="radio" name="reviewStars"/>
-  <label title="bad" for="star-0"></label>
-</div>
-</div>
-          
-
-<div id="6">                            
-<div id="reviewStars-input">
-  <input id="star-4" type="radio" name="reviewStars"/>
-  <label title="gorgeous" for="star-4"></label>
-
-  <input id="star-3" type="radio" name="reviewStars"/>
-  <label title="good" for="star-3"></label>
-
-  <input id="star-2" type="radio" name="reviewStars"/>
-  <label title="regular" for="star-2"></label>
-
-  <input id="star-1" type="radio" name="reviewStars"/>
-  <label title="poor" for="star-1"></label>
-
-  <input id="star-0" type="radio" name="reviewStars"/>
-  <label title="bad" for="star-0"></label>
-</div>
-</div>
-                               
-          <br>  
-          
-        <div class="row mt">
+				<div class="row mt">
                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
-            <div class="project-wrapper">
-                        <div class="project">
-                            <div class="photo-wrapper">
-                                <div class="photo">
-                                  <a class="fancybox" href="{% static 'assets/img/portfolio/port01.jpg' %}"><img class="img-responsive" src="{% static 'assets/img/portfolio/port01.jpg' %}" alt=""></a>
-                                </div>
-                                <div class="overlay"></div>
-                            </div>
-                        </div>
-                    </div>
-          </div><!-- col-lg-4 -->
+						<div class="project-wrapper">
+		                    <div class="project">
+		                        <div class="photo-wrapper">
+		                            <div class="photo">
+		                            	<a class="fancybox"><img class="img-responsive" src="{% static 'assets/img/gtky/pom.jpg' %}" alt=""></a>
+		                            </div>
+		                            <div class="overlay"></div>
+		                        </div>
+		                    </div>
+		                </div>
+					</div><!-- col-lg-4 -->
 
                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
-            <div class="project-wrapper">
-                        <div class="project">
-                            <div class="photo-wrapper">
-                                <div class="photo">
-                                  <a class="fancybox" href="{% static 'assets/img/portfolio/port02.jpg' %}"><img class="img-responsive" src="{% static 'assets/img/portfolio/port02.jpg' %}" alt=""></a>
-                                </div>
-                                <div class="overlay"></div>
-                            </div>
-                        </div>
-                    </div>
-          </div><!-- col-lg-4 -->
+						<div class="project-wrapper">
+		                    <div class="project">
+		                        <div class="photo-wrapper">
+		                            <div class="photo">
+		                            	<a class="fancybox"><img class="img-responsive" src="{% static 'assets/img/gtky/dp.jpg' %}" alt=""></a>
+		                            </div>
+		                            <div class="overlay"></div>
+		                        </div>
+		                    </div>
+		                </div>
+					</div><!-- col-lg-4 -->
 
                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
-            <div class="project-wrapper">
-                        <div class="project">
-                            <div class="photo-wrapper">
-                                <div class="photo">
-                                  <a class="fancybox" href="{% static 'assets/img/portfolio/port03.jpg' %}"><img class="img-responsive" src="{% static 'assets/img/portfolio/port03.jpg' %}" alt=""></a>
-                                </div>
-                                <div class="overlay"></div>
-                            </div>
-                        </div>
-                    </div>
-          </div><!-- col-lg-4 -->
-        </div><!-- /row -->
-<br>
-<div id="7">
-<div id="reviewStars-input" >
-  <input id="star-4" type="radio" name="reviewStars"/>
-  <label title="gorgeous" for="star-4"></label>
+						<div class="project-wrapper">
+		                    <div class="project">
+		                        <div class="photo-wrapper">
+		                            <div class="photo">
+		                            	<a class="fancybox"><img class="img-responsive" src="{% static 'assets/img/gtky/tfios.jpg' %}" alt=""></a>
+		                            </div>
+		                            <div class="overlay"></div>
+		                        </div>
+		                    </div>
+		                </div>
+					</div><!-- col-lg-4 -->
+				</div><!-- /row -->
 
-  <input id="star-3" type="radio" name="reviewStars"/>
-  <label title="good" for="star-3"></label>
-
-  <input id="star-2" type="radio" name="reviewStars"/>
-  <label title="regular" for="star-2"></label>
-
-  <input id="star-1" type="radio" name="reviewStars"/>
-  <label title="poor" for="star-1"></label>
-
-  <input id="star-0" type="radio" name="reviewStars"/>
-  <label title="bad" for="star-0"></label>
-</div>
-</div>
-
- <div id="8">           
-<div id="reviewStars-input" >
-  <input id="star-4" type="radio" name="reviewStars"/>
-  <label title="gorgeous" for="star-4"></label>
-
-  <input id="star-3" type="radio" name="reviewStars"/>
-  <label title="good" for="star-3"></label>
-
-  <input id="star-2" type="radio" name="reviewStars"/>
-  <label title="regular" for="star-2"></label>
-
-  <input id="star-1" type="radio" name="reviewStars"/>
-  <label title="poor" for="star-1"></label>
-
-  <input id="star-0" type="radio" name="reviewStars"/>
-  <label title="bad" for="star-0"></label>
-</div>
-</div>
-          
-
- <div id="9">                           
-<div id="reviewStars-input">
-  <input id="star-4" type="radio" name="reviewStars"/>
-  <label title="gorgeous" for="star-4"></label>
-
-  <input id="star-3" type="radio" name="reviewStars"/>
-  <label title="good" for="star-3"></label>
-
-  <input id="star-2" type="radio" name="reviewStars"/>
-  <label title="regular" for="star-2"></label>
-
-  <input id="star-1" type="radio" name="reviewStars"/>
-  <label title="poor" for="star-1"></label>
-
-  <input id="star-0" type="radio" name="reviewStars"/>
-  <label title="bad" for="star-0"></label>
-</div>
-</div>
-                               
-<br>
-        <div class="row mt mb">
+				<div class="row mt mb">
                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
-            <div class="project-wrapper">
-                        <div class="project">
-                            <div class="photo-wrapper">
-                                <div class="photo">
-                                  <a class="fancybox" href="{% static 'assets/img/portfolio/port04.jpg' %}"><img class="img-responsive" src="{% static 'assets/img/portfolio/port04.jpg' %}" alt=""></a>
-                                </div>
-                                <div class="overlay"></div>
-                            </div>
-                        </div>
-                    </div>
-          </div><!-- col-lg-4 -->
+						<div class="project-wrapper">
+		                    <div class="project">
+		                        <div class="photo-wrapper">
+		                            <div class="photo">
+		                            	<a class="fancybox"><img class="img-responsive" src="{% static 'assets/img/gtky/is.jpg' %}" alt=""></a>
+		                            </div>
+		                            <div class="overlay"></div>
+		                        </div>
+		                    </div>
+		                </div>
+					</div><!-- col-lg-4 -->
 
                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
-            <div class="project-wrapper">
-                        <div class="project">
-                            <div class="photo-wrapper">
-                                <div class="photo">
-                                  <a class="fancybox" href="{% static 'assets/img/portfolio/port05.jpg' %}"><img class="img-responsive" src="{% static 'assets/img/portfolio/port05.jpg' %}" alt=""></a>
-                                </div>
-                                <div class="overlay"></div>
-                            </div>
-                        </div>
-                    </div>
-          </div><!-- col-lg-4 -->
+						<div class="project-wrapper">
+		                    <div class="project">
+		                        <div class="photo-wrapper">
+		                            <div class="photo">
+		                            	<a class="fancybox"><img class="img-responsive" src="{% static 'assets/img/gtky/sm.jpg' %}" alt=""></a>
+		                            </div>
+		                            <div class="overlay"></div>
+		                        </div>
+		                    </div>
+		                </div>
+					</div><!-- col-lg-4 -->
 
                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
-            <div class="project-wrapper">
-                        <div class="project">
-                            <div class="photo-wrapper">
-                                <div class="photo">
-                                  <a class="fancybox" href="{% static 'assets/img/portfolio/port06.jpg' %}"><img class="img-responsive" src="{% static 'assets/img/portfolio/port06.jpg' %}" alt=""></a>
-                                </div>
-                                <div class="overlay"></div>
-                            </div>
-                        </div>
-                    </div>
-          </div><!-- col-lg-4 -->
-        </div><!-- /row -->
- 
-<br>
+						<div class="project-wrapper">
+		                    <div class="project">
+		                        <div class="photo-wrapper">
+		                            <div class="photo">
+		                            	<a class="fancybox"><img class="img-responsive" src="{% static 'assets/img/gtky/whms.jpg' %}" alt=""></a>
+		                            </div>
+		                            <div class="overlay"></div>
+		                        </div>
+		                    </div>
+		                </div>
+					</div><!-- col-lg-4 -->
+				</div><!-- /row -->
 
-    </div>
+		</div>
 
+    
       <!-- **********************************************************************************************************************************************************
       RIGHT SIDEBAR CONTENT
       *********************************************************************************************************************************************************** -->
 
-                  <!--<div class="col-lg-3 ds">
+                  <!-- <div class="col-lg-3 ds">
 
-                    COMPLETED ACTIONS DONUTS CHART
-            <h3>REVIEWS</h3>
-
-
+                    <!--COMPLETED ACTIONS DONUTS CHART
+						<h3>REVIEWS</h3>
 
 
-                  </div>  /col-lg-3 -->
+
+            <!-- /col-lg-3 
+                  </div> -->
+
           </section>
+          
+
       </section>
 
       <!--main content end-->
       <!--footer start-->
       <footer class="site-footer">
+
           <div class="text-center">
+<div class="showback">
+                <h4><i class="fa fa-angle-right"></i> </h4>
+                <!-- Standard button -->
+            <button type="button" class="btn btn-theme03"><a href = "{% url 'dashboard' %}">Get Recommendations!</a></button>
+              </div><!-- /showback -->
               Web Technology Project - Saumya, Shikhar, Niti
               <a href="index.html#" class="go-top">
                   <i class="fa fa-angle-up"></i>
@@ -640,7 +471,7 @@
 
     <!--script for this page-->
     <script src="{% static 'assets/js/sparkline-chart.js' %}"></script>
-  <script src="{% static 'assets/js/zabuto_calendar.js' %}"></script>
+	<script src="{% static 'assets/js/zabuto_calendar.js' %}"></script>
   <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script>
 $(function() {
@@ -650,7 +481,7 @@ $(function() {
 });
 </script>
 
-  <script type="text/javascript">
+	<script type="text/javascript">
         $(document).ready(function () {
         var unique_id = $.gritter.add({
             // (string | mandatory) the heading of the notification
@@ -669,9 +500,9 @@ $(function() {
 
         return false;
         });
-  </script>
+	</script>
 
-  <script type="application/javascript">
+	<script type="application/javascript">
         $(document).ready(function () {
             $("#date-popover").popover({html: true, trigger: "manual"});
             $("#date-popover").hide();
