@@ -203,7 +203,7 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
 
-              	  <p class="centered"><a href="profile.html"><img src="assets/img/hi.jpg" class="img-circle" width="80"></a></p>
+              	  <p class="centered"><a href="profile.html"><img src="{% static 'assets/img/hi.jpg' %}" class="img-circle" width="80"></a></p>
               	  <h5 class="centered">Hi There</h5>
 
                   <li class="mt">
@@ -290,7 +290,7 @@
                       <div class="photo-wrapper">
 
                         <div class="photo">
-                          <a class="fancybox" href="{% static 'assets/img/portfolio/port04.jpg' %}"><img class="img-responsive" src="assets/img/portfolio/port04.jpg" alt=""></a>
+                          <a class="fancybox" href="{% static 'assets/img/portfolio/port04.jpg' %}"><img class="img-responsive" src="{% static 'assets/img/portfolio/port04.jpg' %}" alt=""></a>
                         </div>
                         <div class="overlay"></div>
                       </div>
@@ -307,7 +307,7 @@
 		                    <div class="project">
 		                        <div class="photo-wrapper">
 		                            <div class="photo">
-		                            	<a class="fancybox" href="{% static 'assets/img/md.jpg' %}"><img class="img-responsive" src="assets/img/portfolio/port05.jpg" alt=""></a>
+		                            	<a class="fancybox" href="{% static 'assets/img/md.jpg' %}"><img class="img-responsive" src="{% static 'assets/img/portfolio/port05.jpg' %}" alt=""></a>
 		                            </div>
 		                            <div class="overlay"></div>
 		                        </div>
@@ -320,7 +320,7 @@
 		                    <div class="project">
 		                        <div class="photo-wrapper">
 		                            <div class="photo">
-		                            	<a class="fancybox" href="{% static 'assets/img/portfolio/port06.jpg' %}"><img class="img-responsive" src="assets/img/portfolio/port06.jpg" alt=""></a>
+		                            	<a class="fancybox" href="{% static 'assets/img/portfolio/port06.jpg' %}"><img class="img-responsive" src="{% static 'assets/img/portfolio/port06.jpg' %}" alt=""></a>
 		                            </div>
 		                            <div class="overlay"></div>
 		                        </div>
@@ -335,7 +335,7 @@
 		                    <div class="project">
 		                        <div class="photo-wrapper">
 		                            <div class="photo">
-		                            	<a class="fancybox" href="{% static 'assets/img/portfolio/port01.jpg' %}"><img class="img-responsive" src="assets/img/portfolio/port01.jpg" alt=""></a>
+		                            	<a class="fancybox" href="{% static 'assets/img/portfolio/port01.jpg' %}"><img class="img-responsive" src="{% static 'assets/img/portfolio/port01.jpg' %}" alt=""></a>
 		                            </div>
 		                            <div class="overlay"></div>
 		                        </div>
@@ -348,7 +348,7 @@
 		                    <div class="project">
 		                        <div class="photo-wrapper">
 		                            <div class="photo">
-		                            	<a class="fancybox" href="{% static 'assets/img/portfolio/port02.jpg' %}"><img class="img-responsive" src="assets/img/portfolio/port02.jpg" alt=""></a>
+		                            	<a class="fancybox" href="{% static 'assets/img/portfolio/port02.jpg' %}"><img class="img-responsive" src="{% static 'assets/img/portfolio/port02.jpg' %}" alt=""></a>
 		                            </div>
 		                            <div class="overlay"></div>
 		                        </div>
@@ -361,7 +361,7 @@
 		                    <div class="project">
 		                        <div class="photo-wrapper">
 		                            <div class="photo">
-		                            	<a class="fancybox" href="{% static 'assets/img/portfolio/port03.jpg' %}"><img class="img-responsive" src="assets/img/portfolio/port03.jpg" alt=""></a>
+		                            	<a class="fancybox" href="{% static 'assets/img/portfolio/port03.jpg' %}"><img class="img-responsive" src="{% static 'assets/img/portfolio/port03.jpg' %}" alt=""></a>
 		                            </div>
 		                            <div class="overlay"></div>
 		                        </div>
@@ -376,7 +376,7 @@
 		                    <div class="project">
 		                        <div class="photo-wrapper">
 		                            <div class="photo">
-		                            	<a class="fancybox" href="{% static 'assets/img/portfolio/port04.jpg' %}"><img class="img-responsive" src="assets/img/portfolio/port04.jpg" alt=""></a>
+		                            	<a class="fancybox" href="{% static 'assets/img/portfolio/port04.jpg' %}"><img class="img-responsive" src="{% static 'assets/img/portfolio/port04.jpg' %}" alt=""></a>
 		                            </div>
 		                            <div class="overlay"></div>
 		                        </div>
@@ -389,7 +389,7 @@
 		                    <div class="project">
 		                        <div class="photo-wrapper">
 		                            <div class="photo">
-		                            	<a class="fancybox" href="{% static 'assets/img/portfolio/port05.jpg' %}"><img class="img-responsive" src="assets/img/portfolio/port05.jpg" alt=""></a>
+		                            	<a class="fancybox" href="{% static 'assets/img/portfolio/port05.jpg' %}"><img class="img-responsive" src="{% static 'assets/img/portfolio/port05.jpg' %}" alt=""></a>
 		                            </div>
 		                            <div class="overlay"></div>
 		                        </div>
@@ -402,7 +402,7 @@
 		                    <div class="project">
 		                        <div class="photo-wrapper">
 		                            <div class="photo">
-		                            	<a class="fancybox" href="{% static 'assets/img/portfolio/port06.jpg' %}"><img class="img-responsive" src="assets/img/portfolio/port06.jpg" alt=""></a>
+		                            	<a class="fancybox" href="{% static 'assets/img/portfolio/port06.jpg' %}"><img class="img-responsive" src="{% static 'assets/img/portfolio/port06.jpg' %}" alt=""></a>
 		                            </div>
 		                            <div class="overlay"></div>
 		                        </div>
@@ -417,16 +417,14 @@
       RIGHT SIDEBAR CONTENT
       *********************************************************************************************************************************************************** -->
 
-                  <div class="col-lg-3 ds">
+<!-- <div class="col-lg-3 ds">
 
-                    <!--COMPLETED ACTIONS DONUTS CHART-->
-						<h3>REVIEWS</h3>
-
+  COMPLETED ACTIONS DONUTS CHART
 
 
 
-                  </div> <!-- /col-lg-3 -->
-                  </div>
+
+</div>/col-lg-3 -->
           </section>
       </section>
 
