@@ -16,8 +16,8 @@
     <link href="{% static 'assets/font-awesome/css/font-awesome.css' %}" rel="stylesheet" />
     <link href="{% static 'assets/js/fancybox/jquery.fancybox.css' %}" rel="stylesheet" />
     <!-- Custom styles for this template -->
-    <link href="{% static 'assets/css/style.css" rel="stylesheet' %}">
-    <link href="{% static 'assets/css/profile.css" rel="stylesheet' %}">
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/profile.css'  %}" rel="stylesheet">
 
     <link href="{% static 'assets/css/style-responsive.css' %}" rel="stylesheet">
 
@@ -47,77 +47,7 @@
             <!--logo end-->
             <div class="nav notify-row" id="top_menu">
                 <!--  notification start -->
-                <ul class="nav top-menu">
-                    <!-- settings start -->
-                    <li class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
-                            <i class="fa fa-tasks"></i>
-                            <span class="badge bg-theme">4</span>
-                        </a>
-                        <ul class="dropdown-menu extended tasks-bar">
-                            <div class="notify-arrow notify-arrow-green"></div>
-                            <li>
-                                <p class="green">You have 4 pending tasks</p>
-                            </li>
-                            <li>
-                                <a href="index.html#">
-                                    <div class="task-info">
-                                        <div class="desc">DashGum Admin Panel</div>
-                                        <div class="percent">40%</div>
-                                    </div>
-                                    <div class="progress progress-striped">
-                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                            <span class="sr-only">40% Complete (success)</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html#">
-                                    <div class="task-info">
-                                        <div class="desc">Database Update</div>
-                                        <div class="percent">60%</div>
-                                    </div>
-                                    <div class="progress progress-striped">
-                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                            <span class="sr-only">60% Complete (warning)</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html#">
-                                    <div class="task-info">
-                                        <div class="desc">Product Development</div>
-                                        <div class="percent">80%</div>
-                                    </div>
-                                    <div class="progress progress-striped">
-                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                                            <span class="sr-only">80% Complete</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html#">
-                                    <div class="task-info">
-                                        <div class="desc">Payments Sent</div>
-                                        <div class="percent">70%</div>
-                                    </div>
-                                    <div class="progress progress-striped">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
-                                            <span class="sr-only">70% Complete (Important)</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="external">
-                                <a href="#">See All Tasks</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- settings end -->
-                    <!-- inbox dropdown start-->
+                
                      <!--<li id="header_inbox_bar" class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
                             <i class="fa fa-envelope-o"></i>
@@ -201,38 +131,34 @@
               <ul class="sidebar-menu" id="nav-accordion">
 
                   <p class="centered"><a href="#"><img src="{% static 'assets/img/hi.jpg' %}" class="img-circle" width="80"></a></p>
+                  <p class="centered"><a href="profile.html"><img src="{% static 'assets/img/film3.jpg' %}" class="img-circle" width="80"></a></p>
+
                   <h5 class="centered">Hi There</h5>
 
                   <li class="mt">
-                      <a class="active" href="dashboard.html">
+                      <a href="{% url 'dashboard' %}">
                           <i class="fa fa-dashboard"></i>
                           <span>Dashboard</span>
                       </a>
                   </li>
 
                   <li class = "sub-menu">
-                    <a href = "gallery.html">
+                    <a href = "{% url 'gallery' %}">
                           <i class="fa fa-plus-circle"></i>
                           <span>Add ratings</span>
                       </a>
 
                   </li>
                    <li class = "sub-menu">
-                    <a href = "todo_list.html">
+                    <a href = "{% url 'todo_list' %}">
                           <i class="fa fa-heart"></i>
                           <span>View watchlist</span>
                       </a>
 
                   </li>
+                   
                    <li class = "sub-menu">
-                    <a href = "search.html">
-                          <i class="fa fa-search"></i>
-                          <span>Search movies</span>
-                      </a>
-
-                  </li>
-                   <li class = "sub-menu">
-                    <a href = "profile.html">
+                    <a class="acive" href = "#">
                           <i class="fa fa-user"></i>
                           <span>View your profile</span>
                       </a>
@@ -308,55 +234,28 @@
           </div>
       </aside>
       <!--sidebar end-->
-      <section id="main-content">
-<div class="container">
-	<div class="innerwrap">
-		<section class="section1 clearfix">
-			<div>
-				<div class="row grid clearfix">
-					<div class="col2 first">
-						<img src="http://images.contactmusic.com/newsimages/david_beckham_1133321.jpg" alt="">
-						<h1>Harry Potter</h1>
-						<p>wingardium leviosa felix felicis expecto patronummmmm</p>
-					</div>
-					<div class="col2 last">
-						<div class="grid clearfix">
-							<div class="col3 first">
-								<h1>6940</h1>
-								<span>Recommendations generated</span>
-							</div>
-							<div class="col3"><h1>452</h1>
-							<span>Added to Wishlist</span></div>
-							<div class="col3 last"><h1>207</h1>
-							<span>Ratings added</span></div>
-						</div>
-					</div>
-				</div>
+      
+<!-- /MAIN CONTENT -->
+<!--Simple Card Layout-->
+<section id="main-content">
 
-			</div>
-			<span class="smalltri">
+          <section class="wrapper site-min-height">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 desc">
 
-			<i class="fa fa-star"></i>
-			</span>
-		</section>
-		<section class="section2 clearfix">
-			<div class="grid">
+<div class="hc"></div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 desc">
 
-				<div class="col3 ">
-					<div class="postcont"><img src="http://www.grazia.fr/var/grazia/storage/images/media/images/mode/2016-01-29-david-beckham-devoile-sa/david-beckham-pour-h-m-2/13241802-1-fre-FR/David-Beckham-pour-H-M-2_w300.jpg" alt="">
-					</div>
-					<div class="profileinfo">
-						<img src="http://images.contactmusic.com/newsimages/david_beckham_1133321.jpg" alt="">
-						<p>INFO ABOUT HIM</p>
-					</div>
-				</div>
-
-			</div>
-		</section>
-	</div>
-</div>
-</section><!-- /MAIN CONTENT -->
-
+<div class="centered">
+  <div class="block-update-card">
+    <div class="update-card-body">
+      <h4>Harry Potter</h4>
+      <p>Hi this is about me myself and  I</p>
+    </div>
+  </div>
+  </div>
+  </div>
+  </section>
+  </section>
       <!--main content end-->
       <!--footer start-->
       <footer class="site-footer">
