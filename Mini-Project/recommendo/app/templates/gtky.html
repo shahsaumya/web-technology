@@ -214,28 +214,22 @@
                   </li>
 
                   <li class = "sub-menu">
-                    <a href = "{% url 'gallery' %}">
+                    <a href = "#">
                           <i class="fa fa-plus-circle"></i>
                           <span>Add ratings</span>
                       </a>
 
                   </li>
                    <li class = "sub-menu">
-                    <a href = "{% url 'todo_list' %}">
+                    <a href = "#">
                           <i class="fa fa-heart"></i>
                           <span>View watchlist</span>
                       </a>
 
                   </li>
+                   
                    <li class = "sub-menu">
-                    <a id="search-button" >
-                          <i class="fa fa-search"></i>
-                          <span>Search movies</span>
-                      </a>
-
-                  </li>
-                   <li class = "sub-menu">
-                    <a href = "{% url 'profile' %}">
+                    <a href = "#">
                           <i class="fa fa-user"></i>
                           <span>View your profile</span>
                       </a>
@@ -256,8 +250,8 @@
       <section id="main-content">
 
           <section class="wrapper site-min-height">
-<div class="col-lg-9">
- <div class="container">
+<!-- <div class="col-lg-9">
+ --> <div class="container">
   <div class="row">
            <div id="custom-search-input" style="display:none" >
                             <div class="input-group col-md-8">
@@ -275,140 +269,138 @@
             <h4>Select the movies you would prefer to watch and we'll suggest you many more according to your taste!</h4>
           	<hr>
 
-
+<form action="{% url 'dashboard' %}">
+ 
 
             <div class="row mt">
 
-              <div class="clip">
-                <div class="film">
-
+             
                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
 
                   <div class="project-wrapper">
 
-                    <div class="project">
-
-                      <div class="photo-wrapper">
+                    
 
                         <div class="photo">
+                          <input type="checkbox" name="spectre" value="Spectre"> Spectre<br>
+
                           <a class="fancybox"><img class="img-responsive" src="{% static 'assets/img/gtky/spectre.jpg' %}" alt=""></a>
                         </div>
                         <div class="overlay"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                     
               </div>
 
             </div>
+
           <!-- col-lg-4 -->
+
 
                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
 						<div class="project-wrapper">
-		                    <div class="project">
-		                        <div class="photo-wrapper">
+		                    
 		                            <div class="photo">
+                                  <input type="checkbox" name="pp" value="pp" checked> Pitch Perfect<br>
+
 		                            	<a class="fancybox"><img class="img-responsive" src="{% static 'assets/img/gtky/pp.jpg' %}" alt=""></a>
 		                            </div>
 		                            <div class="overlay"></div>
-		                        </div>
-		                    </div>
+		                        
 		                </div>
 					</div><!-- col-lg-4 -->
 
                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
 						<div class="project-wrapper">
-		                    <div class="project">
-		                        <div class="photo-wrapper">
+		                   
 		                            <div class="photo">
+                                <input type="checkbox" name="gb" value="gb"> Goosebumps<br>
 		                            	<a class="fancybox"><img class="img-responsive" src="{% static 'assets/img/gtky/gb.jpg' %}" alt=""></a>
 		                            </div>
 		                            <div class="overlay"></div>
-		                        </div>
-		                    </div>
+		                       
 		                </div>
 					</div><!-- col-lg-4 -->
 				</div><!-- /row -->
 
 				<div class="row mt">
+
                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
 						<div class="project-wrapper">
-		                    <div class="project">
-		                        <div class="photo-wrapper">
+		                   
 		                            <div class="photo">
+                                  <input type="checkbox" name="pom" value="pom"> Penguins of Madagascar<br>
+
 		                            	<a class="fancybox"><img class="img-responsive" src="{% static 'assets/img/gtky/pom.jpg' %}" alt=""></a>
 		                            </div>
 		                            <div class="overlay"></div>
-		                        </div>
-		                    </div>
+		                       
 		                </div>
 					</div><!-- col-lg-4 -->
 
                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
 						<div class="project-wrapper">
-		                    <div class="project">
-		                        <div class="photo-wrapper">
+		                   
 		                            <div class="photo">
+                          <input type="checkbox" name="dp" value="dp"> Deadpool<br>
+
 		                            	<a class="fancybox"><img class="img-responsive" src="{% static 'assets/img/gtky/dp.jpg' %}" alt=""></a>
 		                            </div>
 		                            <div class="overlay"></div>
-		                        </div>
-		                    </div>
+		                        
 		                </div>
 					</div><!-- col-lg-4 -->
 
-                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
 						<div class="project-wrapper">
-		                    <div class="project">
-		                        <div class="photo-wrapper">
+		                    
 		                            <div class="photo">
+                                <input type="checkbox" name="tfios" value="tfios"> The Fault In Our Stars<br>
+
 		                            	<a class="fancybox"><img class="img-responsive" src="{% static 'assets/img/gtky/tfios.jpg' %}" alt=""></a>
 		                            </div>
 		                            <div class="overlay"></div>
-		                        </div>
-		                    </div>
+		                        
 		                </div>
 					</div><!-- col-lg-4 -->
 				</div><!-- /row -->
 
 				<div class="row mt mb">
+
                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
 						<div class="project-wrapper">
-		                    <div class="project">
-		                        <div class="photo-wrapper">
+		                   
 		                            <div class="photo">
+                                  <input type="checkbox" name="is" value="is"> Interstellar<br>
+
 		                            	<a class="fancybox"><img class="img-responsive" src="{% static 'assets/img/gtky/is.jpg' %}" alt=""></a>
 		                            </div>
 		                            <div class="overlay"></div>
-		                        </div>
-		                    </div>
+		                        
 		                </div>
 					</div><!-- col-lg-4 -->
 
                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
 						<div class="project-wrapper">
-		                    <div class="project">
-		                        <div class="photo-wrapper">
+		                    
 		                            <div class="photo">
+                                  <input type="checkbox" name="sp" value="sp"> The Amazing SpiderMan 2<br>
+
 		                            	<a class="fancybox"><img class="img-responsive" src="{% static 'assets/img/gtky/sm.jpg' %}" alt=""></a>
 		                            </div>
 		                            <div class="overlay"></div>
-		                        </div>
-		                    </div>
+		                        
 		                </div>
 					</div><!-- col-lg-4 -->
 
                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
 						<div class="project-wrapper">
-		                    <div class="project">
-		                        <div class="photo-wrapper">
-		                            <div class="photo">
-		                            	<a class="fancybox"><img class="img-responsive" src="{% static 'assets/img/gtky/whms.jpg' %}" alt=""></a>
+	                            <div class="photo">
+                                  <input type="checkbox" name="whms" value="whms"> When Harry Met Sally<br>
+
+		                            	<a><img class="img-responsive" src="{% static 'assets/img/gtky/whms.jpg' %}" alt=""></a>
 		                            </div>
 		                            <div class="overlay"></div>
 		                        </div>
-		                    </div>
-		                </div>
+		                    
 					</div><!-- col-lg-4 -->
 				</div><!-- /row -->
 
@@ -442,7 +434,9 @@
 <div class="showback">
                 <h4><i class="fa fa-angle-right"></i> </h4>
                 <!-- Standard button -->
-            <button type="button" class="btn btn-theme03"><a href = "{% url 'dashboard' %}">Get Recommendations!</a></button>
+           <!--  <button type="button" class="btn btn-theme03"><a href = "{% url 'dashboard' %}">Get Recommendations!</a></button> -->
+             <input type="submit" class="btn btn-theme03" value="Get Recommendations">
+</form>
               </div><!-- /showback -->
               Web Technology Project - Saumya, Shikhar, Niti
               <a href="index.html#" class="go-top">

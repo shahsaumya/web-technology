@@ -1748,12 +1748,12 @@ PANELS CONFIGURATIONS
   display: block;
   position: relative;
   overflow: hidden;
-  background-color: #68dff0;
+  /*background-color: #68dff0;
   -webkit-transition: background-color 0.4s;
   -moz-transition: background-color 0.4s;
   -o-transition: background-color 0.4s;
   transition: background-color 0.4s;
-}
+*/}
 .project .overlay {
   position: absolute;
   text-align: center;

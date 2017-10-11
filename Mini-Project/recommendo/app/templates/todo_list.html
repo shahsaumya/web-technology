@@ -208,7 +208,7 @@
                   <h5 class="centered">Hi There</h5>
 
                   <li class="mt">
-                      <a class="active" href="#">
+                      <a href="{% url 'dashboard' %}">
                           <i class="fa fa-dashboard"></i>
                           <span>Dashboard</span>
                       </a>
@@ -222,19 +222,13 @@
 
                   </li>
                    <li class = "sub-menu">
-                    <a href = "{% url 'todo_list' %}">
+                    <a class="active" href = "#">
                           <i class="fa fa-heart"></i>
                           <span>View watchlist</span>
                       </a>
 
                   </li>
-                   <li class = "sub-menu">
-                    <a id="search-button" >
-                          <i class="fa fa-search"></i>
-                          <span>Search movies</span>
-                      </a>
-
-                  </li>
+                   
                    <li class = "sub-menu">
                     <a href = "{% url 'profile' %}">
                           <i class="fa fa-user"></i>

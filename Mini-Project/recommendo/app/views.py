@@ -17,6 +17,9 @@ def index(request):
 def dashboard(request):
     return render(request,'dashboard.html')
 
+def movieDesc(request):
+    return render(request,'movieDesc.html')
+
 def gtky(request):
     return render(request,'gtky.html')
 
