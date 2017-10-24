@@ -22,6 +22,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^movieDesc/$', views.movieDesc, name='movieDesc'),
+    url(r'^mdS/$', views.mdS, name='mdS'),
+    url(r'^mdB/$', views.mdB, name='mdB'),
     url(r'^gallery/$', views.gallery, name='gallery'),
     url(r'^gtky/$', views.gtky, name='gtky'),
     url(r'^todo_list/$', views.todo_list, name='todo_list'),

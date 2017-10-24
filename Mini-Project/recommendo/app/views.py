@@ -20,6 +20,12 @@ def dashboard(request):
 def movieDesc(request):
     return render(request,'movieDesc.html')
 
+def mdB(request):
+    return render(request,'mdB.html')
+
+def mdS(request):
+    return render(request,'mdS.html')
+
 def gtky(request):
     return render(request,'gtky.html')
 
