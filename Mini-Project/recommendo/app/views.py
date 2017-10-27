@@ -23,6 +23,9 @@ def movieDesc(request):
 def mdB(request):
     return render(request,'mdB.html')
 
+def ff(request):
+    return render(request,'ff.html')
+
 def mdS(request):
     return render(request,'mdS.html')
 
