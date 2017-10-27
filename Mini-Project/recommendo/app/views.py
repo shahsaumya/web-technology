@@ -41,6 +41,9 @@ def todo_list(request):
 def profile(request):
     return render(request,'profile.html')
 
+def prof(request):
+    return render(request,'prof.html')
+
 def home(request):
     if request.user.is_authenticated():
         return redirect(reverse('index'))

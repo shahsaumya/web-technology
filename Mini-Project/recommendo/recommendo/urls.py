@@ -29,6 +29,7 @@ urlpatterns = [
     url(r'^gtky/$', views.gtky, name='gtky'),
     url(r'^todo_list/$', views.todo_list, name='todo_list'),
     url(r'^profile/$', views.profile, name='profile'),
+    url(r'^prof/$', views.prof, name='prof'),
     url(r'^index/$', views.index, name='index'),
     #url(r'^signup/$', views.signup, name='signup'),
     #url(r'^login/$', views.login, name='login'),

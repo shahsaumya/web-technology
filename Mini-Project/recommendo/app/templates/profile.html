@@ -10,6 +10,8 @@
 
     <title>RECOMMENDO</title>
 
+    <link href="{% static 'assets/css/prof.css' %}" rel="stylesheet">
+
     <!-- Bootstrap core CSS -->
     <link href="{% static 'assets/css/bootstrap.css' %}" rel="stylesheet">
     <!--external css-->
@@ -116,9 +118,9 @@
                 <!--  notification end -->
             </div>
             <div class="top-menu">
-            	<ul class="nav pull-right top-menu">
+                <ul class="nav pull-right top-menu">
                     <li><a class="logout" href="{% url 'logout' %}">Logout</a></li>
-            	</ul>
+                </ul>
             </div>
         </header>
       <!--header end-->
@@ -161,6 +163,13 @@
                     <a class="acive" href = "#">
                           <i class="fa fa-user"></i>
                           <span>View your profile</span>
+                      </a>
+
+                  </li>
+                  <li class = "sub-menu">
+                    <a href = "{% url 'ff' %}">
+                          <i class="fa fa-user"></i>
+                          <span>Contact us</span>
                       </a>
 
                   </li>
@@ -236,43 +245,79 @@
       <!--sidebar end-->
       
 <!-- /MAIN CONTENT -->
-<!--Simple Card Layout-->
+
 <section id="main-content">
 
           <section class="wrapper site-min-height">
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 desc">
 
 <div class="hc"></div>
+
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 desc">
+    <div class="card hovercard">
+        <div class="card-background">
+            <img class="card-bkimg" alt="" src="{% static 'assets/img/us.jpg' %}">
+            <!-- http://lorempixel.com/850/280/people/9/ -->
+        </div>
+        <div class="useravatar">
+            <img alt="" src="{% static 'assets/img/us.jpg' %}">
+        </div>
+        <div class="card-info"> <span class="card-title">Niti Shah</span>
 
-<div class="centered">
-  <div class="block-update-card">
-    <div class="update-card-body">
-      <h4>Welcome back, Niti Shah</h4>
-      <p>Movies we have recommended to you till now: 9</p>
-      <p>Movies you have added to your watchlist till now: 2</p>
-     
-
+        </div>
     </div>
-  </div>
-  </div>
-  </div>
-  </section>
-  </section>
+    <div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
+        <div class="btn-group" role="group">
+            <button type="button" id="stars" class="btn btn-primary" href="#tab1" data-toggle="tab"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                <div class="hidden-xs">Profile</div>
+            </button>
+        </div>
+        <div class="btn-group" role="group">
+            <button type="button" id="favorites" class="btn btn-default" href="#tab2" data-toggle="tab"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                <div class="hidden-xs">Movies</div>
+            </button>
+        </div>
+        <div class="btn-group" role="group">
+            <button type="button" id="following" class="btn btn-default" href="#tab3" data-toggle="tab"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                <div class="hidden-xs">Following</div>
+            </button>
+        </div>
+    </div>
+
+        <div class="well">
+      <div class="tab-content">
+        <div class="tab-pane fade in active" id="tab1">
+          <p>Email id: nits2097@gmail.com</p>
+          <p>Username: niti</p>
+        <p>Age: 20</p>
+
+        </div>
+        <div class="tab-pane fade in" id="tab2">
+          <h3>102 movies recommended till now!</h3>
+        </div>
+        <div class="tab-pane fade in" id="tab3">
+          <h3>Following 63 movies!</h3>
+        </div>
+      </div>
+    </div>
+    
+    </div>
+            
+    
       <!--main content end-->
       <!--footer start-->
-      <footer class="site-footer">
+      <!-- <footer class="site-footer">
           <div class="text-center">
             WT Project
               <a href="#" class="go-top">
                   <i class="fa fa-angle-up"></i>
               </a>
           </div>
-      </footer>
+      </footer> -->
       <!--footer end-->
   </section>
   <!-- js placed at the end of the document so the pages load faster -->
-	<script src="{% static 'assets/js/fancybox/jquery.fancybox.js' %}"></script>
+    <script src="{% static 'assets/js/fancybox/jquery.fancybox.js' %}"></script>
     <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
     <script class="include" type="text/javascript" src="{% static 'assets/js/jquery.dcjqaccordion.2.7.js' %}"></script>
     <script src="{% static 'assets/js/jquery.scrollTo.min.js' %}"></script>
@@ -290,6 +335,14 @@
           jQuery(".fancybox").fancybox();
       });
 
+
+$(document).ready(function() {
+$(".btn-pref .btn").click(function () {
+    $(".btn-pref .btn").removeClass("btn-primary").addClass("btn-default");
+    // $(".tab").addClass("active"); // instead of this do the below 
+    $(this).removeClass("btn-default").addClass("btn-primary");   
+});
+});
   </script>
 
   <script>
