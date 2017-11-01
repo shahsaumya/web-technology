@@ -7,7 +7,9 @@ from django.contrib.auth import authenticate
 from django.contrib.auth import logout as auth_logout
 from django.contrib.auth import login as auth_login
 from django.views.decorators.csrf import csrf_protect, csrf_exempt
-
+from recombee_api_client.api_client import RecombeeClient
+from recombee_api_client.api_requests import *
+client = RecombeeClient('sns', 'cqLZqZnboKlyVKS7EhhYYyM8BflGRDlizngZbljA3kp67tjd1FKfH3WaXLNSXl7F')
 from app.models import Movies
 import csv
 
@@ -73,7 +75,7 @@ def login(request):
         if user:
             if user.is_active:
                 auth_login(request, user)
-                return redirect(reverse('dashboard'))
+                return redirect(reverse('gtky'))
             else:
                 return HttpResponse("Your account is disabled.")
         else:
@@ -84,7 +86,7 @@ def login(request):
     elif request.method == 'GET':
         print(request.user)
         if request.user.is_authenticated:
-             return redirect(reverse('dashboard'))
+             return redirect(reverse('gtky'))
         else:
             return render(request, 'login.html', {})
 
@@ -98,22 +100,35 @@ def add_user(request):
             try:
                 user.set_password(user.password)
                 user.save()
-
+                print(user)
+                print(type(user.id))
+                user_id = user.id
                 profile = profile_form.save(commit=False)
                 profile.user = user
 
                 profile.save()
                 registered = True
-                return redirect(reverse('gtky'))
+
+                try:
+                    print('Sending')
+                    request_user = AddUser(str(user_id))
+                    client.send(request_user)
+                    print('Sent')
+
+                except:
+                    print('Not sent')
+
+                return redirect(reverse('login'))
 
             except:
-                return redirect(reverse('gtky'))
+                return redirect(reverse('login'))
+
 
         else:
             print (user_form.errors, profile_form.errors)
             return redirect(reverse('register'))
     else:
-        return redirect(reverse('gtky'))
+        return redirect(reverse('login'))
 
 @login_required
 def logout(request):

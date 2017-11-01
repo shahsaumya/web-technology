@@ -15,6 +15,7 @@ class UserProfile(models.Model):
     def to_dict(self):
             return convert_to_dict(self)
 
+
 class Movies(models.Model):
     movieId = models.CharField(max_length = 10, default=None)
     title = models.CharField(max_length = 100, default=None)
