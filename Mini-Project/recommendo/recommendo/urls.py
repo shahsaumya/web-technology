@@ -38,7 +38,8 @@ urlpatterns = [
     url(r'^login/$',views.login, name='login'),
     url(r'^logout/$', views.logout, name='logout'),
     url(r'^add-user/$', views.add_user, name='add-user'),
-    url(r'^dashboard/$',views.dashboard, name='dashboard')
+    url(r'^dashboard/$',views.dashboard, name='dashboard'),
+    url(r'^send-choices/$',views.send_choices,name='send-choices')
 
 ]
 if settings.DEBUG:

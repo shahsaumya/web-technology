@@ -25,13 +25,7 @@
 
     <script src="{% static 'assets/js/chart-master/Chart.js' %}"></script>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
-
   <body>
 
   <section id="container" >
@@ -188,7 +182,7 @@
             </div>
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
-                    <li><a class="logout" href={"% url 'logout' %}">Logout</a></li>
+                    <li><a class="logout" href="{% url 'logout' %}">Logout</a></li>
             	</ul>
             </div>
         </header>
@@ -203,38 +197,48 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
 
+              	  <p class="centered"><a href="profile.html"><img src="{% static 'assets/img/hi.jpg' %}" class="img-circle" width="80"></a></p>
+
               	  <p class="centered"><a href="profile.html"><img src="{% static 'assets/img/film3.jpg' %}" class="img-circle" width="80"></a></p>
+
               	  <h5 class="centered">Hi There</h5>
 
                   <li class="mt">
-                      <a href="#">
+                      <a class="active" href="#">
                           <i class="fa fa-dashboard"></i>
                           <span>Dashboard</span>
                       </a>
                   </li>
 
                   <li class = "sub-menu">
-                    <a href = "#">
+                    <a href = "{% url 'gallery' %}">
                           <i class="fa fa-plus-circle"></i>
                           <span>Add ratings</span>
                       </a>
 
                   </li>
                    <li class = "sub-menu">
-                    <a href = "#">
+                    <a href = "{% url 'todo_list' %}">
                           <i class="fa fa-heart"></i>
                           <span>View watchlist</span>
                       </a>
 
                   </li>
-
                    <li class = "sub-menu">
-                    <a href = "#">
+                    <a id="search-button" >
+                          <i class="fa fa-search"></i>
+                          <span>Search movies</span>
+                      </a>
+
+                  </li>
+                   <li class = "sub-menu">
+                    <a href = "{% url 'profile' %}">
                           <i class="fa fa-user"></i>
                           <span>View your profile</span>
                       </a>
 
                   </li>
+
                   <li class = "sub-menu">
                     <a href = "{% url 'ff' %}">
                           <i class="fa fa-user"></i>
@@ -272,179 +276,162 @@
                         </div>
   </div>
 </div>
-          	<h3><i class="fa fa-film"></i> Get To Know You Page </h3>
-            <h4>Select the movies you would prefer to watch and we'll suggest you many more according to your taste!</h4>
+          	<h3><i class="fa fa-film"></i> Recommendations </h3>
           	<hr>
 
-<form action="{% url 'send-choices' %}">
 
 
             <div class="row mt">
 
+              <div class="clip">
+                <div class="film">
 
                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
 
                   <div class="project-wrapper">
 
+                    <div class="project">
 
+                      <div class="photo-wrapper">
 
                         <div class="photo">
-                          <input type="checkbox" name="spectre" value="136020" class="messageCheckbox"> Spectre<br>
-
-                          <a class="fancybox"><img class="img-responsive" src="{% static 'assets/img/gtky/spectre.jpg' %}" alt=""></a>
+                          <a class="fancybox" href="{% static 'assets/img/dashboard/a.jpg' %}"><img class="img-responsive" src="{% static 'assets/img/dashboard/a.jpg' %}" alt=""></a>
                         </div>
                         <div class="overlay"></div>
-
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
             </div>
-
           <!-- col-lg-4 -->
-
 
                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
 						<div class="project-wrapper">
-
+		                    <div class="project">
+		                        <div class="photo-wrapper">
 		                            <div class="photo">
-                                  <input type="checkbox" name="pp" value="133419" class="messageCheckbox"> Pitch Perfect<br>
-
-		                            	<a class="fancybox"><img class="img-responsive" src="{% static 'assets/img/gtky/pp.jpg' %}" alt=""></a>
+		                            	<a href = "{% url 'mdB' %}"><img class="img-responsive" src="{% static 'assets/img/dashboard/b.jpg' %}" alt=""></a>
 		                            </div>
 		                            <div class="overlay"></div>
-
+		                        </div>
+		                    </div>
 		                </div>
 					</div><!-- col-lg-4 -->
 
                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
 						<div class="project-wrapper">
-
+		                    <div class="project">
+		                        <div class="photo-wrapper">
 		                            <div class="photo">
-                                <input type="checkbox" name="gb" value="144620" class="messageCheckbox"> Goosebumps<br>
-		                            	<a class="fancybox"><img class="img-responsive" src="{% static 'assets/img/gtky/gb.jpg' %}" alt=""></a>
+		                            	<a class="fancybox" href="{% static 'assets/img/portfolio/port06.jpg' %}"><img class="img-responsive" src="{% static 'assets/img/dashboard/m.jpg' %}" alt=""></a>
 		                            </div>
 		                            <div class="overlay"></div>
-
+		                        </div>
+		                    </div>
 		                </div>
 					</div><!-- col-lg-4 -->
 				</div><!-- /row -->
 
 				<div class="row mt">
-
                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
 						<div class="project-wrapper">
-
+		                    <div class="project">
+		                        <div class="photo-wrapper">
 		                            <div class="photo">
-                                  <input type="checkbox" name="pom" value="117851" class="messageCheckbox"> Penguins of Madagascar<br>
-
-		                            	<a class="fancybox"><img class="img-responsive" src="{% static 'assets/img/gtky/pom.jpg' %}" alt=""></a>
+		                            	<a class="fancybox" href="{% static 'assets/img/portfolio/port01.jpg' %}"><img class="img-responsive" src="{% static 'assets/img/dashboard/ice.jpg' %}" alt=""></a>
 		                            </div>
 		                            <div class="overlay"></div>
-
+		                        </div>
+		                    </div>
 		                </div>
 					</div><!-- col-lg-4 -->
 
                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
 						<div class="project-wrapper">
-
+		                    <div class="project">
+		                        <div class="photo-wrapper">
 		                            <div class="photo">
-                          <input type="checkbox" name="dp" value="122904" class="messageCheckbox"> Deadpool<br>
-
-		                            	<a class="fancybox"><img class="img-responsive" src="{% static 'assets/img/gtky/dp.jpg' %}" alt=""></a>
+		                            	<a class="fancybox" href="{% static 'assets/img/portfolio/port02.jpg' %}"><img class="img-responsive" src="{% static 'assets/img/dashboard/i.jpg' %}" alt=""></a>
 		                            </div>
 		                            <div class="overlay"></div>
-
+		                        </div>
+		                    </div>
 		                </div>
 					</div><!-- col-lg-4 -->
 
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
+                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
 						<div class="project-wrapper">
-
+		                    <div class="project">
+		                        <div class="photo-wrapper">
 		                            <div class="photo">
-                                <input type="checkbox" name="tfios" value="111921" class="messageCheckbox"> The Fault In Our Stars<br>
-
-		                            	<a class="fancybox"><img class="img-responsive" src="{% static 'assets/img/gtky/tfios.jpg' %}" alt=""></a>
+		                            	<a href = "{% url 'movieDesc' %}"><img class="img-responsive" src="{% static 'assets/img/dashboard/hp.jpg' %}" alt=""></a>
 		                            </div>
 		                            <div class="overlay"></div>
-
+		                        </div>
+		                    </div>
 		                </div>
 					</div><!-- col-lg-4 -->
 				</div><!-- /row -->
 
 				<div class="row mt mb">
-
                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
 						<div class="project-wrapper">
-
+		                    <div class="project">
+		                        <div class="photo-wrapper">
 		                            <div class="photo">
-                                  <input type="checkbox" name="is" value="109487" class="messageCheckbox"> Interstellar<br>
-
-		                            	<a class="fancybox"><img class="img-responsive" src="{% static 'assets/img/gtky/is.jpg' %}" alt=""></a>
-		                            </div>
-		                            <div class="overlay"></div>
-
-		                </div>
-					</div><!-- col-lg-4 -->
-
-                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
-						<div class="project-wrapper">
-
-		                            <div class="photo">
-                                  <input type="checkbox" name="sp" value="110553" class="messageCheckbox"> The Amazing SpiderMan 2<br>
-
-		                            	<a class="fancybox"><img class="img-responsive" src="{% static 'assets/img/gtky/sm.jpg' %}" alt=""></a>
-		                            </div>
-		                            <div class="overlay"></div>
-
-		                </div>
-					</div><!-- col-lg-4 -->
-
-                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
-						<div class="project-wrapper">
-	                            <div class="photo">
-                                  <input type="checkbox" name="whms" value="1307" class="messageCheckbox"> When Harry Met Sally<br>
-
-		                            	<a><img class="img-responsive" src="{% static 'assets/img/gtky/whms.jpg' %}" alt=""></a>
+		                            	<a href = "{% url 'mdS' %}"><img class="img-responsive" src="{% static 'assets/img/dashboard/s.jpg' %}" alt=""></a>
 		                            </div>
 		                            <div class="overlay"></div>
 		                        </div>
+		                    </div>
+		                </div>
+					</div><!-- col-lg-4 -->
 
+                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
+						<div class="project-wrapper">
+		                    <div class="project">
+		                        <div class="photo-wrapper">
+		                            <div class="photo">
+		                            	<a class="fancybox" href="{% static 'assets/img/portfolio/port05.jpg' %}"><img class="img-responsive" src="{% static 'assets/img/dashboard/t.jpg' %}" alt=""></a>
+		                            </div>
+		                            <div class="overlay"></div>
+		                        </div>
+		                    </div>
+		                </div>
+					</div><!-- col-lg-4 -->
+
+                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
+						<div class="project-wrapper">
+		                    <div class="project">
+		                        <div class="photo-wrapper">
+		                            <div class="photo">
+		                            	<a class="fancybox" href="{% static 'assets/img/portfolio/port06.jpg' %}"><img class="img-responsive" src="{% static 'assets/img/dashboard/x.jpg' %}" alt=""></a>
+		                            </div>
+		                            <div class="overlay"></div>
+		                        </div>
+		                    </div>
+		                </div>
 					</div><!-- col-lg-4 -->
 				</div><!-- /row -->
 
 		</div>
 
-
       <!-- **********************************************************************************************************************************************************
       RIGHT SIDEBAR CONTENT
       *********************************************************************************************************************************************************** -->
 
-                  <!-- <div class="col-lg-3 ds">
 
-                    <!--COMPLETED ACTIONS DONUTS CHART
-						<h3>REVIEWS</h3>
-
-
-
-            <!-- /col-lg-3
-                  </div> -->
+	
 
           </section>
-
-
       </section>
 
       <!--main content end-->
       <!--footer start-->
       <footer class="site-footer">
-
           <div class="text-center">
-<div class="showback">
-                <h4><i class="fa fa-angle-right"></i> </h4>
-                <!-- Standard button -->
-           <!--  <button type="button" class="btn btn-theme03"><a href = "{% url 'dashboard' %}">Get Recommendations!</a></button> -->
-             <input type="submit" class="btn btn-theme03" value="Get Recommendations" id="send-my-url-to-django-button">
-</form>
-              </div><!-- /showback -->
               Web Technology Project - Saumya, Shikhar, Niti
               <a href="index.html#" class="go-top">
                   <i class="fa fa-angle-up"></i>
@@ -502,37 +489,6 @@ $(function() {
         return false;
         });
 	</script>
-
-  <script type="text/javascript">
-    $(document).ready(function() {
-        var checkedValue = null;
-        var recommended = [];
-        var inputElements = document.getElementsByClassName('messageCheckbox');
-        for(var i=0; inputElements[i]; ++i){
-            if(inputElements[i].checked){
-              checkedValue = inputElements[i].value;
-              recommended.push(checkedValue);
-            }
-        }
-        $("#send-my-url-to-django-button").submit(function() {
-            $.ajax({
-                url: "{% url 'send-choices' %}",
-                type: "POST",
-                dataType: "json",
-                data: {
-                    recommended: recommended,
-                    csrfmiddlewaretoken: '{{ csrf_token }}'
-                    },
-                success : function(json) {
-                    alert("Successfully sent the URL to Django");
-                },
-                error : function(xhr,errmsg,err) {
-                    alert("Could not send URL to Django. Error: " + xhr.status + ": " + xhr.responseText);
-                }
-            });
-        });
-    });
-  </script>
 
 	<script type="application/javascript">
         $(document).ready(function () {

@@ -11,13 +11,37 @@ from recombee_api_client.api_client import RecombeeClient
 from recombee_api_client.api_requests import *
 client = RecombeeClient('sns', 'cqLZqZnboKlyVKS7EhhYYyM8BflGRDlizngZbljA3kp67tjd1FKfH3WaXLNSXl7F')
 from app.models import Movies
-import csv
+import requests, json
 
 def index(request):
     return render(request,'index.html', {'view_is_index': True})
 
 def dashboard(request):
-    return render(request,'dashboard.html')
+    current_user = request.user
+    user_id=current_user.id
+    movies=[]
+    posters=[]
+    recommended = client.send(UserBasedRecommendation(user_id,'5'))
+    print(recommended)
+    for choice in recommended:
+        add=""
+        travel = Movies.objects.filter(movieId__icontains=choice)
+        movies.append(travel)
+        name = travel.values_list("title", flat=True).first()
+        print(name)
+        splitted = name.split(' ')
+        if(len(splitted)==1):
+            url = "https://api.themoviedb.org/3/search/movie?api_key=b2ab260c085a2d708971348fc410b93c&language=en-US&query="+name+"&page=1&include_adult=false"
+            r = requests.get(url)
+        else:
+            for i in range(0, len(splitted)-1):
+                add=add+splitted[i]+"%20"
+            url = "https://api.themoviedb.org/3/search/movie?api_key=b2ab260c085a2d708971348fc410b93c&language=en-US&query="+add+"&page=1&include_adult=false"
+            r = requests.get(url)
+        poster = "https://image.tmdb.org/t/p/w300_and_h450_bestv2" + json.loads(r.content)["results"][0]["poster_path"]
+        print(poster)
+        posters.append(poster)
+    return render(request,'dashboard.html',{'posters':posters})
 
 def movieDesc(request):
     return render(request,'movieDesc.html')
@@ -50,6 +74,59 @@ def home(request):
     if request.user.is_authenticated():
         return redirect(reverse('index'))
     return render(request,'dashboard.html')
+
+def send_choices(request):
+    current_user = request.user
+    ratings = []
+    final=[]
+    print(current_user.id)
+    user_id = current_user.id;
+    choices = request.GET.get('pp')
+    print(choices)
+    if(choices):
+        final.append(choices)
+    choices = request.GET.get('is')
+    if(choices):
+        final.append(choices)
+    choices = request.GET.get('pom')
+    if(choices):
+        final.append(choices)
+    choices = request.GET.get('tfios')
+    print(choices)
+    if(choices):
+        final.append(choices)
+    choices = request.GET.get('whms')
+    if(choices):
+        final.append(choices)
+    choices = request.GET.get('sp')
+    if(choices):
+        final.append(choices)
+    choices = request.GET.get('dp')
+    if(choices):
+        final.append(choices)
+    choices = request.GET.get('gb')
+    if(choices):
+        final.append(choices)
+    choices = request.GET.get('spectre')
+    if(choices):
+        final.append(choices)
+    print(final)
+    for choice in final:
+        interaction = AddDetailView(user_id, choice,
+                    #optional parameters:
+                cascade_create=True
+                )
+        ratings.append(interaction)
+
+    try:
+        print('sending')
+        client.send(Batch(ratings))
+        print('Send')
+        return redirect(reverse('dashboard'))
+
+    except APIException as e:
+        print(e)
+        return redirect(reverse('gtky'))
 
 def register(request):
     registered = False
