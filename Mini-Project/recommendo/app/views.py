@@ -49,6 +49,8 @@ def movieDesc(request):
 def mdB(request):
     return render(request,'mdB.html')
 
+@csrf_protect
+@csrf_exempt
 def ff(request):
     return render(request,'ff.html')
 
