@@ -21,13 +21,13 @@ def dashboard(request):
     user_id=current_user.id
     movies=[]
     posters=[]
-    recommended = client.send(UserBasedRecommendation(user_id,'5'))
+    recommended = client.send(UserBasedRecommendation(user_id,'6'))
     print(recommended)
     for choice in recommended:
         add=""
         travel = Movies.objects.filter(movieId__icontains=choice)
-        movies.append(travel)
         name = travel.values_list("title", flat=True).first()
+        movies.append(name)
         print(name)
         splitted = name.split(' ')
         if(len(splitted)==1):
