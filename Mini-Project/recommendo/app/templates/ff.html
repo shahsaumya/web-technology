@@ -301,7 +301,8 @@
                         		
                             </div>
                             <div class="form-bottom contact-form">
-			                    <form role="form" action="assets/contact.php" method="post">
+                            {% csrf_token %}
+			                    <form role="form" action="{% url 'ff' %}" method="post">
 			                    	<div class="form-group">
 			                    		<label class="sr-only" for="contact-email">Email</label>
 			                        	<input type="text" name="email" placeholder="Email..." class="contact-email form-control" id="contact-email">
@@ -314,7 +315,7 @@
 			                        	<label class="sr-only" for="contact-message">Message</label>
 			                        	<textarea name="message" placeholder="Message..." class="contact-message form-control" id="contact-message"></textarea>
 			                        </div>
-			                        <button type="submit" class="btn">Send message</button>
+			                        <button type="submit" onclick="myFunction()" class="btn">Send message</button>
 			                    </form>
 		                    </div>
                         </div>
@@ -325,6 +326,11 @@
         </div>
 
 
+<script>
+function myFunction() {
+    alert("Your feedback has been submitted! Thank You");
+}
+</script>
       
           </section>
       </section>
